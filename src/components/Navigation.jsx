@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <nav>
-      <ul>
-        <li><Link to="/about">About Me</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/resume">Resume</Link></li>
+    <nav className="navigation">
+      <ul className="nav-list">
+        <li><Link to="/about" className="nav-link">About Me</Link></li>
+        <li><Link to="/portfolio" className="nav-link">Portfolio</Link></li>
+        <li><Link to="/contact" className="nav-link">Contact</Link></li>
+        <li><Link to="/resume" className="nav-link">Resume</Link></li>
       </ul>
     </nav>
   );

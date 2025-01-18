@@ -3,8 +3,15 @@ import Navigation from './Navigation';
 
 const Header = () => {
   return (
-    <header>
-      <h1>Bryan Esslinger Portfolio</h1>
+    <header className="header">
+      <div className="profile-container">
+        <img
+          className="profile-img"
+          src="/assets/cartoon.png"
+          alt="Bryan Esslinger"
+        />
+        <h1>Bryan Esslinger</h1>
+      </div>
       <Navigation />
     </header>
   );
