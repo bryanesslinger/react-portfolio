@@ -40,8 +40,6 @@ img {
   align-items: center;
   padding: 1rem;
   margin-bottom: 2rem; /* Add space below navigation */
-  background-color: #fff; /* Light background for navigation */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow to separate from content */
   width: 100%;
 }
 
@@ -80,8 +78,8 @@ img {
 
 /* Footer */
 footer {
-  background-color: #333;  /* Dark background for the footer */
-  color: white;
+  background-color: #f4f4f4;  /* Dark background for the footer */
+  color: #333;
   padding: 2rem;
   text-align: center;
   margin-top: 2rem; /* Space from other content */
@@ -156,9 +154,7 @@ footer p {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #ffffff; /* White background for the form */
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   box-sizing: border-box; /* Ensures padding doesn't cause overflow */
 }
 
