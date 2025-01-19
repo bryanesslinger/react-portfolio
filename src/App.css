@@ -1,4 +1,23 @@
 /* Root Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background for the entire page */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+h1, h2, h3, h4, h5, h6 {
+  color: #333; /* Dark color for headings to ensure readability */
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Root Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -21,6 +40,9 @@
   align-items: center;
   padding: 1rem;
   margin-bottom: 2rem; /* Add space below navigation */
+  background-color: #fff; /* Light background for navigation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow to separate from content */
+  width: 100%;
 }
 
 .nav-list {
@@ -56,41 +78,21 @@
   left: 0;
 }
 
-/* Responsive Design for Mobile */
-@media screen and (max-width: 768px) {
-  .navigation {
-    flex-direction: column; /* Stack the navigation items vertically on mobile */
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 2rem; /* Add more space between vertical items */
-  }
-
-  .nav-link {
-    font-size: 1.4rem; /* Slightly larger text on mobile */
-    text-align: center;
-    padding: 0.5rem 0; /* Adjust padding for mobile */
-  }
-}
-
-/* Tablet to Desktop Layout */
-@media screen and (min-width: 768px) {
-  .navigation {
-    flex-direction: row; /* Align items horizontally on larger screens */
-  }
-
-  .nav-list {
-    flex-direction: row;
-    gap: 3rem; /* Increase space on desktop */
-  }
-}
-
+/* Footer */
 footer {
+  background-color: #333;  /* Dark background for the footer */
   color: white;
   padding: 2rem;
   text-align: center;
   margin-top: 2rem; /* Space from other content */
+  width: 100%;
+}
+
+/* Footer Text Styling */
+footer p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #aaa;
 }
 
 /* Social Links Container */
@@ -145,28 +147,7 @@ footer {
   background-color: #1ed760; /* Lighter Spotify green */
 }
 
-/* Footer Text Styling */
-footer p {
-  margin-top: 1rem;
-  font-size: 1rem;
-  color: #aaa;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  footer {
-    padding: 1.5rem;
-  }
-
-  .social-links {
-    gap: 1rem; /* Reduce space between icons on smaller screens */
-  }
-
-  .social-icon {
-    font-size: 1.2rem; /* Smaller icons on mobile */
-  }
-}
-
+/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -175,11 +156,13 @@ footer p {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #ffffff; /* White background for the form */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
 }
 
+/* Form Group */
 .form-group {
   display: flex;
   flex-direction: column; /* Stack label, input, and error vertically */
@@ -188,22 +171,26 @@ footer p {
 label {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  display: block;  /* Make sure the label is on its own line */
+  display: block;
+  color: #333; /* Darker label text color for contrast */
 }
 
 input, textarea {
   padding: 0.8rem;
   font-size: 1rem;
   border-radius: 4px;
-  border: 1px solid #ccc;
-  display: block;  /* Ensure input takes full width and goes on a new line */
+  border: 1px solid #ccc; /* Light border to separate fields */
   width: 100%; /* Ensure inputs are full width inside form */
+  background-color: #fafafa; /* Slightly lighter background for inputs */
+  color: #333; /* Dark text color for readability */
+  max-width: 100%; /* Prevent inputs from stretching too much */
 }
 
 textarea {
   min-height: 120px;
 }
 
+/* Button */
 button {
   padding: 1rem;
   background-color: #3498db;
@@ -220,8 +207,9 @@ button:hover {
   background-color: #2980b9;
 }
 
+/* Error Styling */
 .error {
-  color: #e74c3c;
+  color: #e74c3c;  /* Red for error messages */
   font-size: 0.9rem;
   margin-top: 0.5rem; /* Add space between the input field and error message */
 }
@@ -229,5 +217,42 @@ button:hover {
 .form-success {
   text-align: center;
   font-size: 1.2rem;
-  color: #2ecc71;
+  color: #2ecc71;  /* Green for success messages */
+}
+
+
+
+/* Make sure the form fits within the screen on smaller devices */
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem; /* Reduce padding on smaller screens */
+    max-width: 100%; /* Ensure it fits within the screen */
+  }
+
+  footer {
+    padding: 1.5rem;
+  }
+
+  .social-links {
+    gap: 1rem; /* Reduce space between icons on smaller screens */
+  }
+
+  .social-icon {
+    font-size: 1.2rem; /* Smaller icons on mobile */
+  }
+
+  .navigation {
+    flex-direction: column; /* Stack the navigation items vertically on mobile */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 2rem; /* Add more space between vertical items */
+  }
+
+  .nav-link {
+    font-size: 1.4rem; /* Slightly larger text on mobile */
+    text-align: center;
+    padding: 0.5rem 0; /* Adjust padding for mobile */
+  }
 }
