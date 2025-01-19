@@ -1,4 +1,3 @@
-/* Root Styling */
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +5,15 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-/* Header Styling */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: #333; /* Dark color for headings to ensure readability */
   font-weight: bold;
@@ -17,7 +24,6 @@ img {
   height: auto;
 }
 
-/* Root Container */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -25,7 +31,6 @@ img {
   text-align: center;
 }
 
-/* Profile Image */
 .profile-img {
   width: 150px;
   height: auto;
@@ -33,7 +38,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Navigation */
 .navigation {
   display: flex;
   justify-content: center;
@@ -46,7 +50,7 @@ img {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 3rem; /* Space between the links */
+  gap: 3rem;
   padding: 0;
 }
 
@@ -59,13 +63,11 @@ img {
   position: relative;
 }
 
-/* Hover Effects */
 .nav-link:hover {
   color: #3498db;  /* Blue color for hover */
   transform: scale(1.05);  /* Slightly enlarge the link on hover */
 }
 
-/* Underline Effect on Hover */
 .nav-link:hover::after {
   content: '';
   position: absolute;
@@ -76,24 +78,28 @@ img {
   left: 0;
 }
 
-/* Footer */
 footer {
-  background-color: #f4f4f4;  /* Dark background for the footer */
+  background-color: #f4f4f4;
   color: #333;
   padding: 2rem;
   text-align: center;
-  margin-top: 2rem; /* Space from other content */
+  margin-top: 1rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Footer Text Styling */
 footer p {
   margin-top: 1rem;
+  margin: 0.5rem 0;
   font-size: 1rem;
   color: #aaa;
 }
 
-/* Social Links Container */
 .social-links {
   display: flex;
   justify-content: center;  /* Center the icons */
@@ -102,7 +108,6 @@ footer p {
   margin-top: 1rem;         /* Space above the social icons */
 }
 
-/* Social Icon Styling */
 .social-icon {
   color: #fff;              /* Default icon color */
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
@@ -115,7 +120,6 @@ footer p {
   font-size: 1.5rem;        /* Increase icon size */
 }
 
-/* Icon Brand Colors */
 .social-icon:nth-child(1) {
   background-color: #0077b5; /* LinkedIn blue */
 }
@@ -128,7 +132,6 @@ footer p {
   background-color: #1db954; /* Spotify green */
 }
 
-/* Hover Effects */
 .social-icon:hover {
   transform: scale(1.1);  /* Slightly enlarge the icons on hover */
 }
@@ -145,7 +148,6 @@ footer p {
   background-color: #1ed760; /* Lighter Spotify green */
 }
 
-/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -158,7 +160,6 @@ footer p {
   box-sizing: border-box; /* Ensures padding doesn't cause overflow */
 }
 
-/* Form Group */
 .form-group {
   display: flex;
   flex-direction: column; /* Stack label, input, and error vertically */
@@ -186,7 +187,6 @@ textarea {
   min-height: 120px;
 }
 
-/* Button */
 button {
   padding: 1rem;
   background-color: #3498db;
@@ -203,7 +203,6 @@ button:hover {
   background-color: #2980b9;
 }
 
-/* Error Styling */
 .error {
   color: #e74c3c;  /* Red for error messages */
   font-size: 0.9rem;
@@ -217,8 +216,6 @@ button:hover {
 }
 
 
-
-/* Make sure the form fits within the screen on smaller devices */
 @media screen and (max-width: 768px) {
   .contact-form {
     padding: 1.5rem; /* Reduce padding on smaller screens */
@@ -227,23 +224,33 @@ button:hover {
 
   footer {
     padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .social-links {
-    gap: 1rem; /* Reduce space between icons on smaller screens */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
   }
 
   .social-icon {
-    font-size: 1.2rem; /* Smaller icons on mobile */
+    font-size: 1.2rem;
+    padding: 0.8rem;
   }
 
   .navigation {
     flex-direction: column; /* Stack the navigation items vertically on mobile */
+    width: 100%;
   }
 
   .nav-list {
     flex-direction: column;
     gap: 2rem; /* Add more space between vertical items */
+    width: 100%; /* Ensure nav list takes up full width */
+    margin: 0; /* Remove any unwanted margin */
+    align-items: center; /* Center the items within the list */
   }
 
   .nav-link {
