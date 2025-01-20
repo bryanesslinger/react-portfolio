@@ -1,10 +1,16 @@
 import React from 'react';
 
-const Project = ({ title, description, imageUrl }) => {
+const Project = ({ title, description, imageUrl, linkUrl }) => {
   return (
     <div className="project">
       <h3>{title}</h3>
-      <img src={imageUrl} alt={title} />
+      {linkUrl ? (
+        <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+          <img src={imageUrl} alt={title} />
+        </a>
+      ) : (
+        <img src={imageUrl} alt={title} />
+      )}
       <p>{description}</p>
     </div>
   );

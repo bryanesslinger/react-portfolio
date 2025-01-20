@@ -1,81 +1,96 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
-import './App.css';
+import "./App.css";
 
 const App = () => {
-  // State for form fields
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
-  // State for error messages
   const [errors, setErrors] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
-  // State to track if form was submitted
   const [submitted, setSubmitted] = useState(false);
 
-  // Handle input changes
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
-  // Validate form fields when user submits
+ 
   const validateForm = () => {
     const newErrors = {};
 
-    // Name validation
+    
     if (!formData.name) {
       newErrors.name = "Name is required";
     }
 
-    // Email validation
+    
     if (!formData.email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email address is invalid";
     }
 
-    // Message validation
+    
     if (!formData.message) {
       newErrors.message = "Message is required";
     }
 
     setErrors(newErrors);
 
-    // Return true if no errors, false otherwise
+   
     return Object.keys(newErrors).length === 0;
   };
 
-  // Handle form submission
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Set form as submitted
+  
     setSubmitted(true);
 
-    // Only submit if no errors
+  
     if (validateForm()) {
       console.log("Form Submitted:", formData);
-      setFormData({ name: '', email: '', message: '' }); // Reset form
+      setFormData({ name: "", email: "", message: "" }); // Reset form
       setErrors({}); // Reset errors
       setSubmitted(false); // Reset submission state
     } else {
       console.log("Form has errors, please fix them.");
     }
   };
+
+  const [isBadgeLoaded, setIsBadgeLoaded] = useState(false);
+
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://platform.linkedin.com/badges/js/profile.js";
+    script.async = true;
+    script.onload = () => setIsBadgeLoaded(true);  // Set to true once loaded
+    script.onerror = () => console.error("LinkedIn badge script failed to load");
+    document.body.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    if (isBadgeLoaded) {
+      window.LI?.init();
+    }
+  }, [isBadgeLoaded]);
+
 
   return (
     <Router>
@@ -87,30 +102,179 @@ const App = () => {
             element={
               <div>
                 <img
-                  className="profile-img"
-                  src="/assets/cartoon.png"
-                  alt="Profile Picture"
+                  src="/assets/home.png"
+                  alt="Bryan"
+                  className="about-image"
                 />
-                <h2>About Me</h2>
-                <p>This is about me.</p>
+                <p>
+                  I’m a product-focused professional with over 12 years of
+                  experience in the tech world, currently serving as a Senior
+                  Product Manager at LeagueApps. My work is centered around
+                  using technology and process to solve complex business
+                  problems, and I thrive on building scalable solutions that
+                  create seamless experiences for users. At LeagueApps, I lead
+                  product strategy and development for our scheduling tools,
+                  collaborating with engineering, design, and QA teams to drive
+                  growth in the youth sports industry. I’ve also had the
+                  opportunity to guide the company through major technical
+                  transitions, like shifting from a monolithic architecture to a
+                  microservices-based framework, which has set us up for
+                  long-term success.
+                </p>
+                <br />
+                <br />
+                <img
+                  src="/assets/leagueapps-cartoon.png"
+                  alt="LeagueApps Ess Cartoon"
+                  className="about-image"
+                />
+                <br />
+                <br />
+                <p>
+                  My desire to continue learning and evolving as a well-rounded
+                  leader in the software industry led me to pursue a Full Stack
+                  Coding Bootcamp through Columbia University. As I’ve advanced
+                  in my career, I realized that a deeper understanding of the
+                  technical aspects of product development would enable me to
+                  better communicate with cross-functional teams and drive more
+                  innovative solutions. The bootcamp provided me with hands-on
+                  experience in front-end and back-end development, enhancing my
+                  ability to bridge the gap between product and engineering.
+                  This experience has not only expanded my technical skill set
+                  but also reinforced my commitment to staying ahead of industry
+                  trends and cultivating a more holistic approach to leadership
+                  in the tech space.
+                </p>
+                <br />
+                <br />
+                <img
+                  src="/assets/work.png"
+                  alt="Bryan on laptop"
+                  className="about-image"
+                />
+                <br />
+                <br />
+                <p>
+                  Outside of work, I’m a proud Delaware native and University of
+                  Delaware alum who firmly believes that free time should be
+                  spent at the beach. Whether it’s the Delaware shores or the
+                  lively boardwalk of OCMD, you’ll often find me prioritizing
+                  beach trips over anything else. When I’m not soaking up the
+                  sun, I’m a self-proclaimed foodie who loves cooking and
+                  experimenting with new recipes—the kitchen is where I unleash
+                  my creativity when I’m not focused on product roadmaps. Music
+                  is another huge outlet for me. I’m constantly discovering new
+                  sounds and curating playlists, with artists like Pink Floyd,
+                  Led Zeppelin, The Beatles, Outkast, J. Cole, Lake Street Dive,
+                  Alabama Shakes, Hozier, Talking Heads, Vampire Weekend,
+                  Parcels, The Strokes, and Houndmouth topping my list. It's one
+                  of the ways I continue to channel my creativity, and you can
+                  find my latest musical explorations on my Spotify.
+                </p>
+                <br />
+                <br />
+                <img
+                  src="/assets/concert.png"
+                  alt="Bryan at Brooklyn Made"
+                  className="about-image"
+                />
+                <br />
+                <br />
+                <p>
+                  Since 2012, I’ve called New York City home, and I absolutely
+                  love the city’s energy, walking lifestyle, and endless
+                  opportunities to explore. Whether I’m strolling through parks,
+                  soaking in the vibrant art scene, or enjoying the diverse food
+                  culture, there’s always something new to discover. NYC
+                  continues to fuel my curiosity and creativity, and every day
+                  here is an exciting adventure. My Google map favorites lists
+                  grow daily!
+                </p>
+                <br />
+                <br />
+                <img
+                  src="/assets/nyc.png"
+                  alt="West Village"
+                  className="about-image"
+                />
+                <br />
+                <br />
+                <p>
+                  Baltimore is also very special to me—it's my second home,
+                  where my extended family resides. We’re big Baltimore Orioles
+                  and Ravens fans. Sports, in general, have had a big influence
+                  on my life. I believe, as Nelson Mandela famously said, that
+                  sport has the power to change the world. That’s why it’s so
+                  meaningful to me that I get to work in the sports tech
+                  industry, helping provide more opportunities for kids to play
+                  sports. I’m proud to be part of an industry that empowers
+                  young people to learn life lessons through sports, allowing
+                  them to apply those lessons to become the best versions of
+                  themselves in society.
+                </p>
+                <br />
+                <br />
+                <img
+                  src="/assets/ravens.png"
+                  alt="Farjer and Sons at Ravens"
+                  className="about-image"
+                />
+                <br />
+                <br />
+                <p>
+                  In everything I do, whether it's work or personal life, I’m
+                  driven by curiosity, creativity, and a passion for making
+                  meaningful connections with people and the world around me.
+                </p>
               </div>
             }
           />
           <Route
             path="/portfolio"
             element={
-              <div>
-                <h2>Portfolio</h2>
-                <div>
+              <div className="portfolio-container">
+                <h2 className="portfolio-header">Portfolio</h2>
+                <p className="portfolio-description">
+                  My body of work has evolved with my career – below are a few
+                  examples of projects I've worked on with teams and some that
+                  I've coded myself.
+                </p>
+                <div className="projects-grid">
                   <Project
-                    title="Weather Dashboard"
-                    description="App calls OpenWeather APIs to fetch and display five day forecast for any city"
-                    imageUrl="/assets/weather-dashboard.png"
+                    title="Custom Drag & Drop Calendar"
+                    description="A data-rich, custom drag-and-drop scheduler with conflict logic for youth sports organizations, powered by React and microservices."
+                    imageUrl="/assets/calendar-view.png"
+                    linkUrl="https://support.leagueapps.com/hc/en-us/articles/10579170260119-How-do-I-schedule-tournaments"
                   />
                   <Project
-                    title="Project 2"
-                    description="Description of Project 2"
-                    imageUrl="https://via.placeholder.com/150"
+                    title="Custom Schedule List"
+                    description="Mobile-optimized list view with bulk action capabilities, built using React and microservices, and integrated with the AG Grid library."
+                    imageUrl="/assets/list-view.png"
+                    linkUrl="https://support.leagueapps.com/hc/en-us/articles/23315644300183-New-Club-Scheduling-Experience"
+                  />
+                  <Project
+                    title="LeagueApps Play App"
+                    description="LeagueApps Play is a team management and communications app for players, parents, coaches, staff, and admins to better manage their teams, communications, games and events."
+                    imageUrl="/assets/play.png"
+                    linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
+                  />
+                  <Project
+                    title="Weather Dashboard"
+                    description="App calls OpenWeather APIs to fetch and display five-day forecast for any city."
+                    imageUrl="/assets/weather-dashboard.png"
+                    linkUrl="https://github.com/bryanesslinger/weather-dashboard"
+                  />
+                  <Project
+                    title="Vehicle Builder"
+                    description="TypeScript command-line application using Inquirer."
+                    imageUrl="/assets/vehicle-builder.png"
+                    linkUrl="https://github.com/bryanesslinger/vehicle-builder"
+                  />
+                  <Project
+                    title="Employee Tracker"
+                    description="Command-line application to manage a company's employee database, using Node.js, Inquirer, and PostgreSQL."
+                    imageUrl="/assets/employee-tracker.png"
+                    linkUrl="https://github.com/bryanesslinger/employee-tracker"
                   />
                 </div>
               </div>
@@ -134,7 +298,9 @@ const App = () => {
                       onChange={handleChange}
                       onBlur={() => setSubmitted(true)} // Set submitted state on blur
                     />
-                    {(submitted && errors.name) && <span className="error">{errors.name}</span>}
+                    {submitted && errors.name && (
+                      <span className="error">{errors.name}</span>
+                    )}
                   </div>
 
                   <div className="form-group">
@@ -147,7 +313,9 @@ const App = () => {
                       onChange={handleChange}
                       onBlur={() => setSubmitted(true)} // Set submitted state on blur
                     />
-                    {(submitted && errors.email) && <span className="error">{errors.email}</span>}
+                    {submitted && errors.email && (
+                      <span className="error">{errors.email}</span>
+                    )}
                   </div>
 
                   <div className="form-group">
@@ -159,7 +327,9 @@ const App = () => {
                       onChange={handleChange}
                       onBlur={() => setSubmitted(true)} // Set submitted state on blur
                     />
-                    {(submitted && errors.message) && <span className="error">{errors.message}</span>}
+                    {submitted && errors.message && (
+                      <span className="error">{errors.message}</span>
+                    )}
                   </div>
 
                   <button type="submit">Submit</button>
@@ -171,17 +341,19 @@ const App = () => {
             path="/resume"
             element={
               <div className="resume-container">
-                {/* LinkedIn Badge */}
-                <div
-                  className="badge-base LI-profile-badge"
-                  data-locale="en_US"
-                  data-size="medium"
-                  data-theme="light"
-                  data-type="VERTICAL"
-                  data-vanity="bryanesslinger"
-                  data-version="v1"
-                >
-                </div>
+                {isBadgeLoaded ? (
+                  <div
+                    className="badge-base LI-profile-badge"
+                    data-locale="en_US"
+                    data-size="medium"
+                    data-theme="light"
+                    data-type="VERTICAL"
+                    data-vanity="bryanesslinger"
+                    data-version="v1"
+                  ></div>
+                ) : (
+                  <p>Loading LinkedIn badge...</p>
+                )}
               </div>
             }
           />
