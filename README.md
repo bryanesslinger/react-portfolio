@@ -20,6 +20,7 @@ You can view the live version of my portfolio [here](https://bryanesslinger.netl
 - **React Router**: Used for client-side routing to navigate between different sections.
 - **React Hooks**: useState and useEffect are utilized for managing state and side effects.
 - **CSS**: Custom CSS styles are applied for responsive design.
+- **Netlify**: For deployment.
 
 
 ## License
