@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -20,7 +20,6 @@ const App = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -29,41 +28,33 @@ const App = () => {
     }));
   };
 
- 
   const validateForm = () => {
     const newErrors = {};
 
-    
     if (!formData.name) {
       newErrors.name = "Name is required";
     }
 
-    
     if (!formData.email) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email address is invalid";
     }
 
-    
     if (!formData.message) {
       newErrors.message = "Message is required";
     }
 
     setErrors(newErrors);
 
-   
     return Object.keys(newErrors).length === 0;
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-  
     setSubmitted(true);
 
-  
     if (validateForm()) {
       console.log("Form Submitted:", formData);
       setFormData({ name: "", email: "", message: "" }); // Reset form
@@ -73,24 +64,6 @@ const App = () => {
       console.log("Form has errors, please fix them.");
     }
   };
-
-  const [isBadgeLoaded, setIsBadgeLoaded] = useState(false);
-
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://platform.linkedin.com/badges/js/profile.js";
-    script.async = true;
-    script.onload = () => setIsBadgeLoaded(true);  // Set to true once loaded
-    script.onerror = () => console.error("LinkedIn badge script failed to load");
-    document.body.appendChild(script);
-  }, []);
-
-  useEffect(() => {
-    if (isBadgeLoaded) {
-      window.LI?.init();
-    }
-  }, [isBadgeLoaded]);
-
 
   return (
     <Router>
@@ -121,106 +94,81 @@ const App = () => {
                   microservices-based framework, which has set us up for
                   long-term success.
                 </p>
-                <br />
-                <br />
                 <img
                   src="/assets/leagueapps-cartoon.png"
                   alt="LeagueApps Ess Cartoon"
                   className="about-image"
                 />
-                <br />
-                <br />
                 <p>
-                  My desire to continue learning and evolving as a well-rounded
-                  leader in the software industry led me to pursue a Full Stack
-                  Coding Bootcamp through Columbia University. As I’ve advanced
-                  in my career, I realized that a deeper understanding of the
-                  technical aspects of product development would enable me to
-                  better communicate with cross-functional teams and drive more
-                  innovative solutions. The bootcamp provided me with hands-on
-                  experience in front-end and back-end development, enhancing my
-                  ability to bridge the gap between product and engineering.
-                  This experience has not only expanded my technical skill set
-                  but also reinforced my commitment to staying ahead of industry
-                  trends and cultivating a more holistic approach to leadership
-                  in the tech space.
+                  To grow as a well-rounded leader in the software industry, I
+                  pursued a Full Stack Coding Bootcamp through Columbia
+                  University. This experience deepened my understanding of
+                  product development, improving my ability to communicate with
+                  cross-functional teams and drive innovation. It expanded my
+                  technical skills and reinforced my commitment to staying ahead
+                  of industry trends while fostering a more holistic approach to
+                  leadership.
                 </p>
-                <br />
-                <br />
                 <img
                   src="/assets/work.png"
                   alt="Bryan on laptop"
                   className="about-image"
                 />
-                <br />
-                <br />
                 <p>
                   Outside of work, I’m a proud Delaware native and University of
-                  Delaware alum who firmly believes that free time should be
-                  spent at the beach. Whether it’s the Delaware shores or the
-                  lively boardwalk of OCMD, you’ll often find me prioritizing
-                  beach trips over anything else. When I’m not soaking up the
-                  sun, I’m a self-proclaimed foodie who loves cooking and
-                  experimenting with new recipes—the kitchen is where I unleash
-                  my creativity when I’m not focused on product roadmaps. Music
-                  is another huge outlet for me. I’m constantly discovering new
-                  sounds and curating playlists, with artists like Pink Floyd,
-                  Led Zeppelin, The Beatles, Outkast, J. Cole, Lake Street Dive,
-                  Alabama Shakes, Hozier, Talking Heads, Vampire Weekend,
-                  Parcels, The Strokes, and Houndmouth topping my list. It's one
-                  of the ways I continue to channel my creativity, and you can
-                  find my latest musical explorations on my Spotify.
+                  Delaware. Whether it’s the Delaware shores or the lively
+                  boardwalk of OCMD, you’ll often find me prioritizing beach
+                  trips over anything else. When I’m not soaking up the sun, I’m
+                  a self-proclaimed foodie who loves cooking and experimenting
+                  with new recipes—the kitchen is where I unleash my creativity
+                  when I’m not focused on product roadmaps.
                 </p>
-                <br />
-                <br />
+                <img
+                  src="/assets/chef.png"
+                  alt="Bryan Cooking"
+                  className="about-image"
+                />
+                <p>
+                  Music is another huge outlet for me. I’m constantly
+                  discovering new sounds and curating playlists, with artists
+                  like Pink Floyd, Led Zeppelin, The Beatles, Outkast, J. Cole,
+                  Lake Street Dive, Alabama Shakes, Hozier, Talking Heads,
+                  Vampire Weekend, Parcels, The Strokes, and Houndmouth topping
+                  my list these days. It's one of the ways I continue to channel
+                  my creativity, and you can find my latest musical explorations
+                  on my Spotify.
+                </p>
                 <img
                   src="/assets/concert.png"
                   alt="Bryan at Brooklyn Made"
                   className="about-image"
                 />
-                <br />
-                <br />
                 <p>
-                  Since 2012, I’ve called New York City home, and I absolutely
-                  love the city’s energy, walking lifestyle, and endless
-                  opportunities to explore. Whether I’m strolling through parks,
-                  soaking in the vibrant art scene, or enjoying the diverse food
-                  culture, there’s always something new to discover. NYC
-                  continues to fuel my curiosity and creativity, and every day
-                  here is an exciting adventure. My Google map favorites lists
-                  grow daily!
+                  Since 2012 I’ve called New York City home. I love the city’s
+                  energy, the walking lifestyle, and the endless opportunities
+                  to explore. NYC continues to fuel my curiosity and creativity,
+                  and every day here is an exciting adventure. My Google map
+                  favorites lists grow daily!
                 </p>
-                <br />
-                <br />
                 <img
                   src="/assets/nyc.png"
                   alt="West Village"
                   className="about-image"
                 />
-                <br />
-                <br />
                 <p>
-                  Baltimore is also very special to me—it's my second home,
-                  where my extended family resides. We’re big Baltimore Orioles
-                  and Ravens fans. Sports, in general, have had a big influence
-                  on my life. I believe, as Nelson Mandela famously said, that
-                  sport has the power to change the world. That’s why it’s so
-                  meaningful to me that I get to work in the sports tech
-                  industry, helping provide more opportunities for kids to play
-                  sports. I’m proud to be part of an industry that empowers
-                  young people to learn life lessons through sports, allowing
-                  them to apply those lessons to become the best versions of
-                  themselves in society.
+                  Baltimore is like a second home to me, where my extended
+                  family lives and we’re avid Orioles and Ravens fans. Sports
+                  have always influenced my life, and I believe, as Nelson
+                  Mandela said, they have the power to change the world. That’s
+                  why working in the sports tech industry is so meaningful to
+                  me—helping provide kids with more opportunities to play and
+                  learn life lessons that shape them into better people.
                 </p>
-                <br />
-                <br />
                 <img
                   src="/assets/ravens.png"
                   alt="Farjer and Sons at Ravens"
                   className="about-image"
                 />
-                <br />
-                <br />
                 <p>
                   In everything I do, whether it's work or personal life, I’m
                   driven by curiosity, creativity, and a passion for making
@@ -296,7 +244,7 @@ const App = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      onBlur={() => setSubmitted(true)} // Set submitted state on blur
+                      onBlur={() => setSubmitted(true)}
                     />
                     {submitted && errors.name && (
                       <span className="error">{errors.name}</span>
@@ -311,7 +259,7 @@ const App = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      onBlur={() => setSubmitted(true)} // Set submitted state on blur
+                      onBlur={() => setSubmitted(true)}
                     />
                     {submitted && errors.email && (
                       <span className="error">{errors.email}</span>
@@ -325,7 +273,7 @@ const App = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      onBlur={() => setSubmitted(true)} // Set submitted state on blur
+                      onBlur={() => setSubmitted(true)}
                     />
                     {submitted && errors.message && (
                       <span className="error">{errors.message}</span>
@@ -338,25 +286,24 @@ const App = () => {
             }
           />
           <Route
-            path="/resume"
-            element={
-              <div className="resume-container">
-                {isBadgeLoaded ? (
-                  <div
-                    className="badge-base LI-profile-badge"
-                    data-locale="en_US"
-                    data-size="medium"
-                    data-theme="light"
-                    data-type="VERTICAL"
-                    data-vanity="bryanesslinger"
-                    data-version="v1"
-                  ></div>
-                ) : (
-                  <p>Loading LinkedIn badge...</p>
-                )}
-              </div>
-            }
-          />
+  path="/resume"
+  element={
+    <div className="resume-container">
+      <a
+        href="https://www.linkedin.com/in/bryanesslinger/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/assets/linkedin.png"
+          alt="LinkedIn Profile"
+          className="linkedin-icon"
+          width="500" 
+        />
+      </a>
+    </div>
+  }
+/>
         </Routes>
       </main>
       <Footer />
