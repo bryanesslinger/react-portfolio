@@ -7,7 +7,7 @@ const Footer = () => {
       <p>2025 Bryan Esslinger. All Rights Reserved.</p>
       <div className="social-links">
         <a
-          href="linkedin.com/in/bryanesslinger/"
+          href="https://linkedin.com/in/bryanesslinger/"
           target="_blank"
           rel="noopener noreferrer"
           className="social-icon"
