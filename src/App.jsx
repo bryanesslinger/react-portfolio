@@ -116,7 +116,7 @@ const App = () => {
                 />
                 <p>
                   Outside of work, I’m a proud Delaware native and University of
-                  Delaware. Whether it’s the Delaware shores or the lively
+                  Delaware alum. Whether it’s the Delaware shores or the lively
                   boardwalk of OCMD, you’ll often find me prioritizing beach
                   trips over anything else. When I’m not soaking up the sun, I’m
                   a self-proclaimed foodie who loves cooking and experimenting

@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>2025 Bryan Esslinger. All Rights Reserved.</p>
+      <p>Built by Bryan | 2025</p>
       <div className="social-links">
         <a
           href="https://linkedin.com/in/bryanesslinger/"
