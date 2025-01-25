@@ -75,6 +75,11 @@ const App = () => {
             path="/about"
             element={
               <div>
+                <p>
+                  I love stories. Every day and every situation has its own.
+                  This constantly stirs and fuels my curiosity, in life and in
+                  my career. Here's a look at my story.
+                </p>
                 <img
                   src="/assets/home.png"
                   alt="Bryan"
@@ -83,17 +88,19 @@ const App = () => {
                 <p>
                   I’m a product-focused professional with over 12 years of
                   experience in the tech world, currently serving as a Senior
-                  Product Manager at LeagueApps. My work is centered around
-                  using technology and process to solve complex business
-                  problems, and I thrive on building scalable solutions that
-                  create seamless experiences for users. At LeagueApps, I lead
-                  product strategy and development for our scheduling tools,
-                  collaborating with engineering, design, and QA teams to drive
-                  growth in the youth sports industry. I’ve also had the
-                  opportunity to guide the company through major technical
-                  transitions, like shifting from a monolithic architecture to a
-                  microservices-based framework, which has set us up for
-                  long-term success.
+                  Product Manager at{" "}
+                  <a href="https://leagueapps.com/" target="_blank">
+                    LeagueApps
+                  </a>
+                  . My work is centered around using technology and process to
+                  solve complex business problems. I thrive on building scalable
+                  solutions that create enjoyable experiences for users. At
+                  LeagueApps, I lead product strategy and development for our
+                  scheduling tools, collaborating with engineering, design, and
+                  QA teams to drive growth in the youth sports industry. For all
+                  you parents out there with young kids playing sports, I'm
+                  working every day to make your life easier. You
+                  deserve it.
                 </p>
                 <img
                   src="/assets/leagueapps-cartoon.png"
@@ -130,14 +137,23 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Music is another huge outlet for me. I’m constantly
-                  discovering new sounds and curating playlists, with artists
-                  like Pink Floyd, Led Zeppelin, The Beatles, Outkast, J. Cole,
-                  Lake Street Dive, Alabama Shakes, Hozier, Talking Heads,
-                  Vampire Weekend, Parcels, The Strokes, and Houndmouth topping
-                  my list these days. It's one of the ways I continue to channel
-                  my creativity, and you can find my latest musical explorations
-                  on my Spotify.
+                  Music is also a big part of my life. I’m always discovering new
+                  sounds, putting together playlists, and going to live shows.
+                  There’s something special about how a song can instantly take
+                  you back to a moment, with all the
+                  memories that come with it. Growing up in the 90s definitely
+                  shaped my taste - it’s pretty eclectic and gnarly, if I do say so myself. I
+                  love classic rock from the 60s and 70s, the bold sounds of the
+                  80s, 90s hip hop, the alternative vibes of the 2000s, and the
+                  indie scene that’s been growing ever since.
+                  <a
+                    href="https://open.spotify.com/user/bmorebry?si=95e50a9eef8f4157"
+                    target="_blank"
+                  >
+                    {" "}
+                    Follow me on Spotify
+                  </a>{" "}
+                  and check out my playlists.
                 </p>
                 <img
                   src="/assets/concert.png"
@@ -182,9 +198,9 @@ const App = () => {
             path="/portfolio"
             element={
               <div className="portfolio-container">
-                <h2 className="portfolio-header">Portfolio</h2>
-                <p className="portfolio-description">
-                 Here are a few of my favorite projects that I've worked on and played different roles with.
+                <p>
+                  Below are a few of my favorite projects that I've worked on and
+                  played different roles in.
                 </p>
                 <div className="projects-grid">
                   <Project
@@ -231,8 +247,7 @@ const App = () => {
             path="/contact"
             element={
               <div>
-                <h2>Contact</h2>
-
+                <p> Tell me a story!</p>
                 {/* Contact Form */}
                 <form onSubmit={handleSubmit} className="contact-form">
                   <div className="form-group">
@@ -285,28 +300,25 @@ const App = () => {
             }
           />
           <Route
-  path="/resume"
-  element={
-    <div className="resume-container">
-      <a
-        href="https://www.linkedin.com/in/bryanesslinger/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/assets/linkedin.png"
-          alt="LinkedIn Profile"
-          className="linkedin-icon"
-          width="500" 
-        />
-      </a>
-    </div>
-  }
-/>
-<Route
-            path="/experience"
-            element={<Experience />}
+            path="/resume"
+            element={
+              <div className="resume-container">
+                <a
+                  href="https://www.linkedin.com/in/bryanesslinger/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="/assets/linkedin.png"
+                    alt="LinkedIn Profile"
+                    className="linkedin-icon"
+                    width="500"
+                  />
+                </a>
+              </div>
+            }
           />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </main>
       <Footer />

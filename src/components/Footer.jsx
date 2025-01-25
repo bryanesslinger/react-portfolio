@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
+    const headerHeight = document.querySelector('.header')?.offsetHeight || 0; // Get the height of the navigation bar (header)
+    window.scrollTo({ top: headerHeight, behavior: 'smooth' }); // Smooth scroll to the top
   };
 
 
