@@ -264,8 +264,8 @@ button:hover {
 
 @media screen and (max-width: 768px) {
   .contact-form {
-    padding: 1.5rem; /* Reduce padding on smaller screens */
-    max-width: 100%; /* Ensure it fits within the screen */
+    padding: 1.5rem;
+    max-width: 100%;
   }
 
   footer {
@@ -273,21 +273,32 @@ button:hover {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  footer p {
+    margin-top: 1rem;
+    margin: 0.5rem 0;
+    color: #639E93 !important;
+    font-family: 'Monofett', sans-serif;
+    font-size: 1.75rem;
+
   }
 
   .social-links {
-    gap: 1rem;
-    margin: 0;
+    gap: 1.5rem;
+    margin: 1.5rem;
     padding: 0;
   }
 
   .social-icon {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding: 0.8rem;
   }
 
   .navigation {
-    flex-direction: column; /* Stack the navigation items vertically on mobile */
+    flex-direction: column;
     width: 100%;
   }
 
