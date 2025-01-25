@@ -184,9 +184,7 @@ const App = () => {
               <div className="portfolio-container">
                 <h2 className="portfolio-header">Portfolio</h2>
                 <p className="portfolio-description">
-                  My body of work has evolved with my career – below are a few
-                  examples of projects I've worked on with teams and some that
-                  I've coded myself.
+                 Here are a few of my favorite projects that I've worked on and played different roles with.
                 </p>
                 <div className="projects-grid">
                   <Project

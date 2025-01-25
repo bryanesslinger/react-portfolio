@@ -36,6 +36,14 @@ h2, h3, h4, h5, h6{
   font-family: 'Roboto', sans-serif;
 }
 
+a {
+  color:#8483AD;
+}
+
+a:hover {
+    color:#413daf;
+  }
+
 p {
   color: #333
 }
@@ -63,8 +71,8 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
+
+  margin-bottom: .25rem;
   width: 100%;
 }
 
@@ -85,7 +93,8 @@ img {
 }
 
 .nav-link:hover {
-  color: #639E93;
+  color: #413daf;
+
   transform: scale(1.5);
 }
 
@@ -94,7 +103,7 @@ img {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #639E93;
+  background-color: #8483AD;
   bottom: -4px;
   left: 0;
 }
@@ -104,7 +113,7 @@ footer {
   color: #333;
   padding: 2rem;
   text-align: center;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -112,14 +121,29 @@ footer {
   align-items: center;
   box-sizing: border-box;
   overflow: hidden;
+  border-top: dotted;
 }
 
 footer p {
   margin-top: 1rem;
   margin: 0.5rem 0;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #639E93 !important;
+  font-family: 'Monofett', sans-serif;
+
   
+}
+
+.footer-img {
+  width: 42px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: .5rem;
+}
+
+.footer-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .social-links {
@@ -211,7 +235,7 @@ textarea {
 
 button {
   padding: 1rem;
-  background-color: #639E93;
+  background-color:#8483AD;
   color: white;
   font-size: 1.2rem;
   border: none;
@@ -222,7 +246,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: #413daf;
 }
 
 .error {
@@ -315,7 +339,6 @@ button:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
-
 
 
 .portfolio-container {
@@ -453,3 +476,6 @@ button:hover {
 .tool-card:hover .tool-icon, .tool-card:hover {
   transform: scale(1.1);
 }
+
+
+

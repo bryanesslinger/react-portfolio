@@ -1,10 +1,24 @@
 import React from 'react';
 import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
+  };
+
+
   return (
     <footer className="footer">
-      <p>Built by Bryan | 2025</p>
+      <a href="/">
+        <img
+          className="footer-img"
+          src="/assets/cartoon.png"
+          alt="Bryan Esslinger"
+        />
+        </a>
+      <a href="mailto:bryanessl@gmail.com">bryanessl@gmail.com</a>
       <div className="social-links">
         <a
           href="https://linkedin.com/in/bryanesslinger/"
@@ -31,6 +45,16 @@ const Footer = () => {
           <FaSpotify size={24} />
         </a>
       </div>
+      <nav className="navigation">
+      <ul className="nav-list">
+        <li><Link to="/about" className="footer-link" onClick={() => {scrollToTop(); }}>About Me</Link></li>
+        <li><Link to="/portfolio" className="footer-link" onClick={() => {scrollToTop(); }}>Portfolio</Link></li>
+        <li><Link to="/experience" className="footer-link" onClick={() => {scrollToTop(); }}>Experience</Link></li>
+        <li><Link to="/resume" className="footer-link" onClick={() => {scrollToTop(); }}>Resume</Link></li>
+        <li><Link to="/contact" className="footer-link" onClick={() => {scrollToTop(); }}>Contact</Link></li>
+      </ul>
+    </nav>
+      <p>Built by Bryan | 2025</p>
     </footer>
   );
 };
