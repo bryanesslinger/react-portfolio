@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaSpotify, FaFilm } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -44,6 +44,14 @@ const Footer = () => {
           className="social-icon"
         >
           <FaSpotify size={24} />
+        </a>
+        <a
+          href="https://letterboxd.com/bmorebry/films/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-icon"
+        >
+          <FaFilm size={24} />
         </a>
       </div>
       <nav className="navigation">

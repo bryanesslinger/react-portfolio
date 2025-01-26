@@ -72,13 +72,28 @@ const App = () => {
       <main>
         <Routes>
           <Route
+            path="/"
+            element={
+              <div>
+                <div className="gif-container">
+                  <img
+                    src="/assets/wave.gif"
+                    alt="Animated GIF"
+                    className="about-image"
+                    />
+                </div>
+                <p>Greetings!</p>
+              </div>
+            }
+          />
+          <Route
             path="/about"
             element={
               <div>
                 <p>
                   I love stories. Every day and every situation has its own.
-                  This constantly stirs and fuels my curiosity, in life and in
-                  my career. Here's a look at my story.
+                  This constantly stirs my curiosity, in life and in my career.
+                  Here's a look at my story so far.
                 </p>
                 <img
                   src="/assets/home.png"
@@ -93,14 +108,14 @@ const App = () => {
                     LeagueApps
                   </a>
                   . My work is centered around using technology and process to
-                  solve complex business problems. I thrive on building scalable
-                  solutions that create enjoyable experiences for users. At
-                  LeagueApps, I lead product strategy and development for our
-                  scheduling tools, collaborating with engineering, design, and
-                  QA teams to drive growth in the youth sports industry. For all
-                  you parents out there with young kids playing sports, I'm
-                  working every day to make your life easier. You
-                  deserve it.
+                  solve complex business problems. At LeagueApps, I lead product
+                  strategy and development for our scheduling tools,
+                  collaborating with engineering, design, and QA teams to drive
+                  growth in the youth sports industry. I've been at LeagueApps
+                  since inception, so I've experience all of the startup growing
+                  pains for over a decade. For all you parents out there with
+                  young kids playing sports, I'm working every day to make your
+                  lives easier. You deserve it.
                 </p>
                 <img
                   src="/assets/leagueapps-cartoon.png"
@@ -110,12 +125,12 @@ const App = () => {
                 <p>
                   To grow as a well-rounded leader in the software industry, I
                   pursued a Full Stack Coding Bootcamp through Columbia
-                  University. This experience deepened my understanding of
-                  product development, improving my ability to communicate with
-                  cross-functional teams and drive innovation. It expanded my
-                  technical skills and reinforced my commitment to staying ahead
-                  of industry trends while fostering a more holistic approach to
-                  leadership.
+                  University in 2024-25. This experience deepened my
+                  understanding of product development, improving my ability to
+                  communicate with cross-functional teams and drive innovation.
+                  It expanded my technical skills and reinforced my commitment
+                  to staying ahead of industry trends while fostering a more
+                  holistic approach to leadership.
                 </p>
                 <img
                   src="/assets/work.png"
@@ -137,15 +152,14 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Music is also a big part of my life. I’m always discovering new
-                  sounds, putting together playlists, and going to live shows.
-                  There’s something special about how a song can instantly take
-                  you back to a moment, with all the
-                  memories that come with it. Growing up in the 90s definitely
-                  shaped my taste - it’s pretty eclectic and gnarly, if I do say so myself. I
-                  love classic rock from the 60s and 70s, the bold sounds of the
-                  80s, 90s hip hop, the alternative vibes of the 2000s, and the
-                  indie scene that’s been growing ever since.
+                  Music is also a big part of my life. I’m always discovering
+                  new sounds, putting together playlists, and going to live
+                  shows. There’s something special about how a song can
+                  instantly take you back to a moment, with all the memories
+                  that come with it. Growing up in the 90s definitely shaped my
+                  taste - it’s pretty eclectic and gnarly. I love classic rock
+                  from the 60's and 70's, 80's avante-garde, 90's hip hop,
+                  2000's alternative, and the growing indie scene since.
                   <a
                     href="https://open.spotify.com/user/bmorebry?si=95e50a9eef8f4157"
                     target="_blank"
@@ -199,8 +213,8 @@ const App = () => {
             element={
               <div className="portfolio-container">
                 <p>
-                  Below are a few of my favorite projects that I've worked on and
-                  played different roles in.
+                  Below are a few of my favorite projects that I've worked on
+                  and played different roles in.
                 </p>
                 <div className="projects-grid">
                   <Project

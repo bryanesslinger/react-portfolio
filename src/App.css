@@ -168,32 +168,49 @@ footer p {
 }
 
 .social-icon:nth-child(1) {
-  background-color: #0077b5; /* LinkedIn blue */
+  background-color: #0077b5;
 }
 
 .social-icon:nth-child(2) {
-  background-color: #211f1f; /* GitHub dark */
+  background-color: #211f1f;
 }
 
 .social-icon:nth-child(3) {
-  background-color: #1db954; /* Spotify green */
+  background-color: #1db954;
 }
 
 .social-icon:hover {
-  transform: scale(1.1);  /* Slightly enlarge the icons on hover */
+  transform: scale(1.1);
 }
 
 .social-icon:nth-child(1):hover {
-  background-color: #005582; /* Darker LinkedIn blue */
+  background-color: #005582;
 }
 
 .social-icon:nth-child(2):hover {
-  background-color: #000000; /* Darker GitHub color */
+  background-color: #000000;
 }
 
 .social-icon:nth-child(3):hover {
-  background-color: #1ed760; /* Lighter Spotify green */
+  background-color: #1ed760;
 }
+
+.social-icon:nth-child(4) {
+  background-color: #333; 
+}
+
+.social-icon:nth-child(4) svg {
+  color: #F7C35A;
+}
+
+.social-icon:nth-child(4):hover {
+  background-color: #555;
+}
+
+.social-icon:nth-child(4):hover svg {
+  color: #f0b100;
+}
+
 
 .contact-form {
   display: flex;
@@ -467,6 +484,16 @@ button:hover {
 
 .tool-card:hover .tool-icon, .tool-card:hover {
   transform: scale(1.1);
+}
+
+.gif-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.animated-gif {
+  width: 100%;
+  max-width: 300px;
 }
 
 
