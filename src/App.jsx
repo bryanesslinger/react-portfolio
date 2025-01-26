@@ -92,7 +92,7 @@ const App = () => {
               <div>
                 <p>
                   I love stories. Every day and every situation has its own.
-                  This constantly stirs my curiosity, in life and in my career.
+                  Stories constantly stir my curiosity, in life and in my career.
                   Here's a look at my story so far.
                 </p>
                 <img
