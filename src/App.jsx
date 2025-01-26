@@ -80,7 +80,7 @@ const App = () => {
                     src="/assets/wave.gif"
                     alt="Animated GIF"
                     className="about-image"
-                    />
+                  />
                 </div>
                 <p>Greetings!</p>
               </div>
@@ -218,20 +218,38 @@ const App = () => {
                 </p>
                 <div className="projects-grid">
                   <Project
+                    title="MLB RBI"
+                    description="Oversaw the implementation and website design for the Los Angeles Dodgers' digital transformation of their flagship youth initiative, Reviving Baseball in Inner Cities (RBI)."
+                    imageUrl="/assets/dodgers-rbi.png"
+                    linkUrl="https://www.mlb.com/rbi"
+                  />
+                  <Project
+                    title="Jr. NBA"
+                    description="Directed the implementation and website design for the National Basketball Association's digital transformation of their youth initiatives, Jr. NBA and WNBA."
+                    imageUrl="/assets/jr-nba.png"
+                    linkUrl="https://jr.nba.com/"
+                  />
+                  <Project
+                    title="Madison Square Garden"
+                    description="Coordinated the integration and process for Jr. Knicks, Jr. Rangers, Jr. Liberty, and Rockettes teams to use LeagueApps."
+                    imageUrl="/assets/jr-rangers.png"
+                    linkUrl="https://www.nhl.com/rangers/community/junior-rangers/"
+                  />
+                  <Project
                     title="Custom Drag & Drop Calendar"
-                    description="A data-rich, custom drag-and-drop scheduler with conflict logic for youth sports organizations, powered by React and microservices."
+                    description="Led requirements for data-rich, custom drag-and-drop scheduler with conflict logic for youth sports organizations, powered by React and microservices."
                     imageUrl="/assets/calendar-view.png"
                     linkUrl="https://support.leagueapps.com/hc/en-us/articles/10579170260119-How-do-I-schedule-tournaments"
                   />
                   <Project
                     title="Custom Schedule List"
-                    description="Mobile-optimized list view with bulk action capabilities, built using React and microservices, and integrated with the AG Grid library."
+                    description="Led requirements for mobile-optimized list view with bulk action capabilities, built using React and microservices, and integrated with the AG Grid library."
                     imageUrl="/assets/list-view.png"
                     linkUrl="https://support.leagueapps.com/hc/en-us/articles/23315644300183-New-Club-Scheduling-Experience"
                   />
                   <Project
                     title="LeagueApps Play App"
-                    description="LeagueApps Play is a team management and communications app for players, parents, coaches, staff, and admins to better manage their teams, communications, games and events."
+                    description="Led the team in building the first app for iOS and Android, and developed the process for creating branded apps for customers."
                     imageUrl="/assets/play.png"
                     linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
                   />
