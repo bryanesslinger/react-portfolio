@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
@@ -91,9 +91,9 @@ const App = () => {
             element={
               <div>
                 <p>
-                  I love stories. Every day and every situation has its own.
-                  Stories constantly stir my curiosity, in life and in my career.
-                  Here's a look at my story so far.
+                  I love stories. Every day and every situation has its own -
+                  they constantly stir my curiosity. Here's a look at mine so
+                  far.
                 </p>
                 <img
                   src="/assets/home.png"
@@ -101,7 +101,7 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  I’m a product-focused professional with over 12 years of
+                  I’m a product-focused professional with over 13 years of
                   experience in the tech world, currently serving as a Senior
                   Product Manager at{" "}
                   <a href="https://leagueapps.com/" target="_blank">
@@ -110,10 +110,10 @@ const App = () => {
                   . My work is centered around using technology and process to
                   solve complex business problems. At LeagueApps, I lead product
                   strategy and development for our scheduling tools,
-                  collaborating with engineering, design, and QA teams to drive
-                  growth in the youth sports industry. I've been at LeagueApps
-                  since inception, so I've experience all of the startup growing
-                  pains for over a decade. For all you parents out there with
+                  collaborating with engineering, design, and business teams to
+                  drive growth in the youth sports industry. I've been at
+                  LeagueApps since inception in 2012, experiencing all stages of
+                  startup growth and scaling. For all you parents out there with
                   young kids playing sports, I'm working every day to make your
                   lives easier. You deserve it.
                 </p>
@@ -130,7 +130,9 @@ const App = () => {
                   communicate with cross-functional teams and drive innovation.
                   It expanded my technical skills and reinforced my commitment
                   to staying ahead of industry trends while fostering a more
-                  holistic approach to leadership.
+                  holistic approach to leadership. I've learned to love coding
+                  and creating my own projects - I built this
+                  very site from scratch using React!
                 </p>
                 <img
                   src="/assets/work.png"
@@ -141,10 +143,10 @@ const App = () => {
                   Outside of work, I’m a proud Delaware native and University of
                   Delaware alum. Whether it’s the Delaware shores or the lively
                   boardwalk of OCMD, you’ll often find me prioritizing beach
-                  trips over anything else. When I’m not soaking up the sun, I’m
-                  a self-proclaimed foodie who loves cooking and experimenting
-                  with new recipes—the kitchen is where I unleash my creativity
-                  when I’m not focused on product roadmaps.
+                  trips. When I’m not soaking up the sun, I’m a self-proclaimed
+                  foodie who loves cooking and experimenting with new
+                  recipes—the kitchen is where I unleash my creativity when I’m
+                  not focused on product roadmaps.
                 </p>
                 <img
                   src="/assets/chef.png"
@@ -154,12 +156,12 @@ const App = () => {
                 <p>
                   Music is also a big part of my life. I’m always discovering
                   new sounds, putting together playlists, and going to live
-                  shows. There’s something special about how a song can
-                  instantly take you back to a moment, with all the memories
-                  that come with it. Growing up in the 90s definitely shaped my
-                  taste - it’s pretty eclectic and gnarly. I love classic rock
-                  from the 60's and 70's, 80's avante-garde, 90's hip hop,
-                  2000's alternative, and the growing indie scene since.
+                  shows. I've always been drawn to how a song can instantly take
+                  you back to a moment, with all the memories that come with it.
+                  Growing up in the eclectic 90s definitely shaped my taste. I
+                  love classic rock from the 60's and 70's, 80's avante-garde,
+                  90's hip hop, 2000's alternative, and the growing indie scene
+                  since.
                   <a
                     href="https://open.spotify.com/user/bmorebry?si=95e50a9eef8f4157"
                     target="_blank"
@@ -187,13 +189,15 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Baltimore is like a second home to me, where my extended
-                  family lives and we’re avid Orioles and Ravens fans. Sports
-                  have always influenced my life, and I believe, as Nelson
-                  Mandela said, they have the power to change the world. That’s
-                  why working in the sports tech industry is so meaningful to
-                  me—helping provide kids with more opportunities to play and
-                  learn life lessons that shape them into better people.
+                  Baltimore is like a second home to me, it's where my family
+                  roots are and it's where you'll find me for several holidays and
+                  events throughout the year. We’re avid Orioles and Ravens
+                  fans. Sports have always had a big influence in my life, and I
+                  believe, as Nelson Mandela said, they have the power to change
+                  the world. That’s why working in the sports tech industry is
+                  so meaningful to me—helping provide kids with more
+                  opportunities to play and learn life lessons that shape them
+                  into better people.
                 </p>
                 <img
                   src="/assets/ravens.png"
