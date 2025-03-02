@@ -248,8 +248,14 @@ const App = () => {
                     linkUrl="https://support.leagueapps.com/hc/en-us/articles/23315644300183-New-Club-Scheduling-Experience"
                   />
                   <Project
+                    title="LeagueApps Gateway"
+                    description="Product Manager for the payments team responsible for developing an integrated in-product payment processor using Stripe Connect, streamlining payment collection and significantly improving company profit margins."
+                    imageUrl="/assets/leagueapps-gateway.png"
+                    linkUrl="https://leagueapps.com/youth-sports-management-platform/payments/"
+                  />
+                  <Project
                     title="LeagueApps Play App"
-                    description="Led the team in building the first app for iOS and Android, and developed the process for creating branded apps for customers."
+                    description="Product manager for the native mobile team who built the first app for iOS and Android, and developed the process for creating branded apps for customers."
                     imageUrl="/assets/play.png"
                     linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
                   />
