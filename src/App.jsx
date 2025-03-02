@@ -236,18 +236,6 @@ const App = () => {
                     linkUrl="https://www.nba.com/knicks/junior"
                   />
                   <Project
-                    title="Custom Drag & Drop Calendar"
-                    description="Led requirements for data-rich, custom drag-and-drop scheduler with conflict logic for youth sports organizations, powered by React and microservices."
-                    imageUrl="/assets/calendar-view.png"
-                    linkUrl="https://support.leagueapps.com/hc/en-us/articles/10579170260119-How-do-I-schedule-tournaments"
-                  />
-                  <Project
-                    title="Custom Schedule List"
-                    description="Led requirements for mobile-optimized list view with bulk action capabilities, built using React and microservices, and integrated with the AG Grid library."
-                    imageUrl="/assets/list-view.png"
-                    linkUrl="https://support.leagueapps.com/hc/en-us/articles/23315644300183-New-Club-Scheduling-Experience"
-                  />
-                  <Project
                     title="LeagueApps Gateway"
                     description="Product Manager for the payments team responsible for developing an integrated in-product payment processor using Stripe Connect, streamlining payment collection and significantly improving company profit margins."
                     imageUrl="/assets/leagueapps-gateway.png"
@@ -258,6 +246,24 @@ const App = () => {
                     description="Product manager for the native mobile team who built the first app for iOS and Android, and developed the process for creating branded apps for customers."
                     imageUrl="/assets/play.png"
                     linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
+                  />
+                  <Project
+                    title="LeagueApps Design Shop"
+                    description="Spearheaded Design Shop, a professional web design service powered on Wordpress, scaling it from contractor based to full in-house team generating revenue."
+                    imageUrl="/assets/designshop.gif"
+                    linkUrl="https://join.leagueapps.com/designshop"
+                  />
+                  <Project
+                    title="Custom Drag & Drop Calendar"
+                    description="Led requirements for data-rich, custom drag-and-drop scheduler with conflict logic for youth sports organizations, powered by React and microservices."
+                    imageUrl="/assets/calendar-view.png"
+                    linkUrl="https://support.leagueapps.com/hc/en-us/articles/10579170260119-How-do-I-schedule-tournaments"
+                  />
+                  <Project
+                    title="Custom Schedule List"
+                    description="Led requirements for mobile-optimized list view with bulk action capabilities, built using React and microservices, and integrated with the AG Grid library."
+                    imageUrl="/assets/list-view.png"
+                    linkUrl="https://support.leagueapps.com/hc/en-us/articles/23315644300183-New-Club-Scheduling-Experience"
                   />
                   <Project
                     title="Weather Dashboard"
@@ -341,18 +347,13 @@ const App = () => {
             path="/resume"
             element={
               <div className="resume-container">
-                <a
-                  href="https://www.linkedin.com/in/bryanesslinger/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src="/assets/linkedin.png"
-                    alt="LinkedIn Profile"
-                    className="linkedin-icon"
-                    width="500"
-                  />
-                </a>
+                <iframe
+                  src="https://docs.google.com/document/d/e/2PACX-1vTz81MrimFnAvolVzpNloFAevpsX8NU30qxQN6VJkQJlfS3Pj5wiPIf_6RP8-FQuIf8aP-_PCWF2aBM/pub?embedded=true"
+                  width="75%"
+                  height="2050px"
+                  frameBorder="0"
+                  title="Resume"
+                ></iframe>
               </div>
             }
           />
