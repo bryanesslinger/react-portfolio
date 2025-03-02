@@ -101,21 +101,17 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  I’m a product-focused professional with over 13 years of
-                  experience in the tech world, currently serving as a Senior
-                  Product Manager at{" "}
-                  <a href="https://leagueapps.com/" target="_blank">
-                    LeagueApps
-                  </a>
-                  . My work is centered around using technology and process to
-                  solve complex business problems. At LeagueApps, I lead product
-                  strategy and development for our scheduling tools,
-                  collaborating with engineering, design, and business teams to
-                  drive growth in the youth sports industry. I've been at
-                  LeagueApps since inception in 2012, experiencing all stages of
-                  startup growth and scaling. For all you parents out there with
-                  young kids playing sports, I'm working every day to make your
-                  lives easier. You deserve it.
+                  I'm an empathetic problem solver focused on delivering
+                  impactful solutions. Over the course of my career, I've helped
+                  build and scale a software company that empowers organizations
+                  to transition online and grow. I've worked closely with
+                  hundreds of businesses—from small local organizations to
+                  global brands—helping them streamline operations, manage
+                  member databases, process payments, and integrate seamlessly
+                  with their tech stack. As one of the first ten employees at
+                  LeagueApps, I’ve played a key role in driving growth, helping
+                  the company scale from startup to serving over 3,000 customers
+                  and 30M users.
                 </p>
                 <img
                   src="/assets/leagueapps-cartoon.png"
@@ -131,8 +127,8 @@ const App = () => {
                   It expanded my technical skills and reinforced my commitment
                   to staying ahead of industry trends while fostering a more
                   holistic approach to leadership. I've learned to love coding
-                  and creating my own projects - I built this
-                  very site from scratch using React!
+                  and creating my own projects - I built this very site from
+                  scratch using React!
                 </p>
                 <img
                   src="/assets/work.png"
@@ -190,8 +186,8 @@ const App = () => {
                 />
                 <p>
                   Baltimore is like a second home to me, it's where my family
-                  roots are and it's where you'll find me for several holidays and
-                  events throughout the year. We’re avid Orioles and Ravens
+                  roots are and it's where you'll find me for several holidays
+                  and events throughout the year. We’re avid Orioles and Ravens
                   fans. Sports have always had a big influence in my life, and I
                   believe, as Nelson Mandela said, they have the power to change
                   the world. That’s why working in the sports tech industry is
@@ -223,21 +219,21 @@ const App = () => {
                 <div className="projects-grid">
                   <Project
                     title="MLB RBI"
-                    description="Oversaw the implementation and website design for the Los Angeles Dodgers' digital transformation of their flagship youth initiative, Reviving Baseball in Inner Cities (RBI)."
+                    description="Collaborated with the Los Angeles Dodgers' team to implement a digital transformation for their youth initiative, Reviving Baseball in Inner Cities (RBI), by providing innovative technology solutions for a modernized website experience."
                     imageUrl="/assets/dodgers-rbi.png"
                     linkUrl="https://www.mlb.com/rbi"
                   />
                   <Project
                     title="Jr. NBA"
-                    description="Directed the implementation and website design for the National Basketball Association's digital transformation of their youth initiatives, Jr. NBA and WNBA."
+                    description="Worked closely with the NBA’s team to develop and implement technology solutions for the Jr. NBA and WNBA programs, enhancing their digital platforms to better serve young basketball players and their communities."
                     imageUrl="/assets/jr-nba.png"
                     linkUrl="https://jr.nba.com/"
                   />
                   <Project
                     title="Madison Square Garden"
-                    description="Coordinated the integration and process for Jr. Knicks, Jr. Rangers, Jr. Liberty, and Rockettes teams to use LeagueApps."
-                    imageUrl="/assets/jr-rangers.png"
-                    linkUrl="https://www.nhl.com/rangers/community/junior-rangers/"
+                    description="Partnered with Madison Square Garden’s team to integrate LeagueApps for the Jr. Knicks, Jr. Rangers, Jr. Liberty, and Rockettes, providing efficient technology solutions to streamline team management and operations."
+                    imageUrl="/assets/jr-knicks.png"
+                    linkUrl="https://www.nba.com/knicks/junior"
                   />
                   <Project
                     title="Custom Drag & Drop Calendar"

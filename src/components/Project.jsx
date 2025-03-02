@@ -2,7 +2,7 @@ import React from 'react';
 
 const Project = ({ title, description, imageUrl, linkUrl }) => {
   return (
-    <div className="project">
+    <div className="project-card">
       <h3>{title}</h3>
       {linkUrl ? (
         <a href={linkUrl} target="_blank" rel="noopener noreferrer">
