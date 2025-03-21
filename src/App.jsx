@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
 import Experience from "./components/Experience";
+import emailjs from '@emailjs/browser';
 import "./App.css";
 
 const App = () => {
@@ -20,6 +21,11 @@ const App = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [emailStatus, setEmailStatus] = useState({
+    loading: false,
+    success: false,
+    error: false
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -51,19 +57,36 @@ const App = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     setSubmitted(true);
+    setEmailStatus({ loading: true, success: false, error: false });
 
     if (validateForm()) {
-      console.log("Form Submitted:", formData);
-      setFormData({ name: "", email: "", message: "" }); // Reset form
-      setErrors({}); // Reset errors
-      setSubmitted(false); // Reset submission state
+      try {
+        await emailjs.send(
+          'service_pyld18f',
+          'template_e3gp2gr',
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+          },
+          'public_key_4e73ZFCZDBErolPjB'
+        );
+
+        setEmailStatus({ loading: false, success: true, error: false });
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+        setErrors({}); // Reset errors
+      } catch (error) {
+        console.error('Error sending email:', error);
+        setEmailStatus({ loading: false, success: false, error: true });
+      }
     } else {
+      setEmailStatus({ loading: false, success: false, error: false });
       console.log("Form has errors, please fix them.");
     }
+    setSubmitted(false);
   };
 
   return (
@@ -109,7 +132,7 @@ const App = () => {
                   global brands—helping them streamline operations, manage
                   member databases, process payments, and integrate seamlessly
                   with their tech stack. As one of the first ten employees at
-                  LeagueApps, I’ve played a key role in driving growth, helping
+                  LeagueApps, I've played a key role in driving growth, helping
                   the company scale from startup to serving over 3,000 customers
                   and 30M users.
                 </p>
@@ -136,12 +159,12 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Outside of work, I’m a proud Delaware native and University of
-                  Delaware alum. Whether it’s the Delaware shores or the lively
-                  boardwalk of OCMD, you’ll often find me prioritizing beach
-                  trips. When I’m not soaking up the sun, I’m a self-proclaimed
+                  Outside of work, I'm a proud Delaware native and University of
+                  Delaware alum. Whether it's the Delaware shores or the lively
+                  boardwalk of OCMD, you'll often find me prioritizing beach
+                  trips. When I'm not soaking up the sun, I'm a self-proclaimed
                   foodie who loves cooking and experimenting with new
-                  recipes—the kitchen is where I unleash my creativity when I’m
+                  recipes—the kitchen is where I unleash my creativity when I'm
                   not focused on product roadmaps.
                 </p>
                 <img
@@ -150,7 +173,7 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Music is also a big part of my life. I’m always discovering
+                  Music is also a big part of my life. I'm always discovering
                   new sounds, putting together playlists, and going to live
                   shows. I've always been drawn to how a song can instantly take
                   you back to a moment, with all the memories that come with it.
@@ -173,7 +196,7 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Since 2012 I’ve called New York City home. I love the city’s
+                  Since 2012 I've called New York City home. I love the city's
                   energy, the walking lifestyle, and the endless opportunities
                   to explore. NYC continues to fuel my curiosity and creativity,
                   and every day here is an exciting adventure. My Google map
@@ -187,10 +210,10 @@ const App = () => {
                 <p>
                   Baltimore is like a second home to me, it's where my family
                   roots are and it's where you'll find me for several holidays
-                  and events throughout the year. We’re avid Orioles and Ravens
+                  and events throughout the year. We're avid Orioles and Ravens
                   fans. Sports have always had a big influence in my life, and I
                   believe, as Nelson Mandela said, they have the power to change
-                  the world. That’s why working in the sports tech industry is
+                  the world. That's why working in the sports tech industry is
                   so meaningful to me—helping provide kids with more
                   opportunities to play and learn life lessons that shape them
                   into better people.
@@ -201,7 +224,7 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  In everything I do, whether it's work or personal life, I’m
+                  In everything I do, whether it's work or personal life, I'm
                   driven by curiosity, creativity, and a passion for making
                   meaningful connections with people and the world around me.
                 </p>
@@ -225,13 +248,13 @@ const App = () => {
                   />
                   <Project
                     title="Jr. NBA"
-                    description="Worked closely with the NBA’s team to develop and implement technology solutions for the Jr. NBA and WNBA programs, enhancing their digital platforms to better serve young basketball players and their communities."
+                    description="Worked closely with the NBA's team to develop and implement technology solutions for the Jr. NBA and WNBA programs, enhancing their digital platforms to better serve young basketball players and their communities."
                     imageUrl="/assets/jr-nba.png"
                     linkUrl="https://jr.nba.com/"
                   />
                   <Project
                     title="Madison Square Garden"
-                    description="Partnered with Madison Square Garden’s team to integrate LeagueApps for the Jr. Knicks, Jr. Rangers, Jr. Liberty, and Rockettes, providing efficient technology solutions to streamline team management and operations."
+                    description="Partnered with Madison Square Garden's team to integrate LeagueApps for the Jr. Knicks, Jr. Rangers, Jr. Liberty, and Rockettes, providing efficient technology solutions to streamline team management and operations."
                     imageUrl="/assets/jr-knicks.png"
                     linkUrl="https://www.nba.com/knicks/junior"
                   />
@@ -291,7 +314,7 @@ const App = () => {
             path="/contact"
             element={
               <div>
-                <p> Tell me a story!</p>
+                <p> Tell me something good!</p>
                 {/* Contact Form */}
                 <form onSubmit={handleSubmit} className="contact-form">
                   <div className="form-group">
@@ -338,7 +361,25 @@ const App = () => {
                     )}
                   </div>
 
-                  <button type="submit">Submit</button>
+                  <button 
+                    type="submit" 
+                    disabled={emailStatus.loading}
+                    className={emailStatus.loading ? 'loading' : ''}
+                  >
+                    {emailStatus.loading ? 'Sending...' : 'Submit'}
+                  </button>
+
+                  {emailStatus.success && (
+                    <p className="success-message">
+                      Thank you for your message! I'll get back to you soon.
+                    </p>
+                  )}
+
+                  {emailStatus.error && (
+                    <p className="error-message">
+                      Sorry, there was an error sending your message. Please try again later.
+                    </p>
+                  )}
                 </form>
               </div>
             }
