@@ -15,7 +15,7 @@ const Footer = () => {
       <a href="/">
         <img
           className="footer-img"
-          src="/assets/cartoon.png"
+          src="/assets/new-cartoon.png"
           alt="Bryan Esslinger"
         />
         </a>
