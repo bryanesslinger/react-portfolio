@@ -7,6 +7,9 @@ import Experience from "./components/Experience";
 import emailjs from '@emailjs/browser';
 import "./App.css";
 
+// Initialize EmailJS
+emailjs.init("4e73ZFCZDBErolPjB");
+
 const App = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -64,15 +67,11 @@ const App = () => {
 
     if (validateForm()) {
       try {
-        await emailjs.send(
+        await emailjs.sendForm(
           'service_pyld18f',
           'template_e3gp2gr',
-          {
-            from_name: formData.name,
-            from_email: formData.email,
-            message: formData.message,
-          },
-          'public_key_4e73ZFCZDBErolPjB'
+          e.target,
+          '4e73ZFCZDBErolPjB'
         );
 
         setEmailStatus({ loading: false, success: true, error: false });
