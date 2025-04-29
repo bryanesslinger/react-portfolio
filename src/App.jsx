@@ -240,6 +240,30 @@ const App = () => {
                 </p>
                 <div className="projects-grid">
                   <Project
+                    title="LeagueApps Gateway"
+                    description="Product Manager for the payments team responsible for developing an integrated in-product payment processor using Stripe Connect, streamlining payment collection and significantly improving company profit margins."
+                    imageUrl="/assets/leagueapps-gateway.png"
+                    linkUrl="https://leagueapps.com/youth-sports-management-platform/payments/"
+                  />
+                  <Project
+                    title="LeagueApps Play App"
+                    description="Product manager for the native mobile team, taking LeagueApps Play from 0->1, used by millions of players, parents, and coaches."
+                    imageUrl="/assets/play.png"
+                    linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
+                  />
+                  <Project
+                    title="LeagueApps Design Shop"
+                    description="Spearheaded Design Shop, a professional web design service powered on Wordpress, scaling it from contractor based to full in-house team generating revenue."
+                    imageUrl="/assets/designshop.gif"
+                    linkUrl="https://join.leagueapps.com/designshop"
+                  />
+                    <Project
+                    title="LeagueApps Facilities"
+                    description="Led integration implementation and GTM for new product line, making significant impact on enterprise customer growth."
+                    imageUrl="/assets/facilities.png"
+                    linkUrl="https://leagueapps.com/youth-sports-management-platform/facilities/"
+                  />
+                  <Project
                     title="MLB RBI"
                     description="Collaborated with the Los Angeles Dodgers' team to implement a digital transformation for their youth initiative, Reviving Baseball in Inner Cities (RBI), by providing innovative technology solutions for a modernized website experience."
                     imageUrl="/assets/dodgers-rbi.png"
@@ -258,22 +282,16 @@ const App = () => {
                     linkUrl="https://www.nba.com/knicks/junior"
                   />
                   <Project
-                    title="LeagueApps Gateway"
-                    description="Product Manager for the payments team responsible for developing an integrated in-product payment processor using Stripe Connect, streamlining payment collection and significantly improving company profit margins."
-                    imageUrl="/assets/leagueapps-gateway.png"
-                    linkUrl="https://leagueapps.com/youth-sports-management-platform/payments/"
+                    title="Photo Trace"
+                    description="PhotoTrace helps you uncover the hidden stories behind old photos by using AI to predict where and when they were taken."
+                    imageUrl="/assets/photo-trace2.png"
+                    linkUrl="https://photo-trace-client.onrender.com/"
                   />
-                  <Project
-                    title="LeagueApps Play App"
-                    description="Product manager for the native mobile team who built the first app for iOS and Android, and developed the process for creating branded apps for customers."
-                    imageUrl="/assets/play.png"
-                    linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
-                  />
-                  <Project
-                    title="LeagueApps Design Shop"
-                    description="Spearheaded Design Shop, a professional web design service powered on Wordpress, scaling it from contractor based to full in-house team generating revenue."
-                    imageUrl="/assets/designshop.gif"
-                    linkUrl="https://join.leagueapps.com/designshop"
+                 <Project
+                    title="Word Guess"
+                    description="PhotoTrace helps you uncover the hidden stories behind old photos by using AI to predict where and when they were taken."
+                    imageUrl="/assets/word-guess.png"
+                    linkUrl="https://main.d1mdu2ha8sopcx.amplifyapp.com/"
                   />
                   <Project
                     title="Custom Drag & Drop Calendar"
