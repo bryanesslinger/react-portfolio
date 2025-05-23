@@ -406,7 +406,7 @@ const App = () => {
             element={
               <div className="resume-container">
                 <iframe
-                  src="https://docs.google.com/document/d/e/2PACX-1vTz81MrimFnAvolVzpNloFAevpsX8NU30qxQN6VJkQJlfS3Pj5wiPIf_6RP8-FQuIf8aP-_PCWF2aBM/pub?embedded=true"
+                  src="https://docs.google.com/document/d/e/2PACX-1vT-vq2fFGW8vaf_1I98ZmqiIyN5lLNLlLYYquB3_cMMJZ0tGrs1Rf-YJtLWlSH5nOUbCo-ZCdadzb8x/pub?embedded=true"
                   width="75%"
                   height="2050px"
                   frameBorder="0"
