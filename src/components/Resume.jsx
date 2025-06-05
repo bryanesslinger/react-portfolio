@@ -10,15 +10,13 @@ const Resume = () => {
       >
         Download PDF
       </a>
-      <div className="pdf-viewer">
-        <iframe
-          src="/assets/Bryan_Esslinger_Resume.pdf"
-          width="100%"
-          height="1000px"
-          style={{ border: 'none' }}
-          title="Resume PDF"
-        />
-      </div>
+      <object
+        data="/assets/Bryan_Esslinger_Resume.pdf"
+        type="application/pdf"
+        width="100%"
+        height="1000px"
+      >
+      </object>
     </>
   );
 };
