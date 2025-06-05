@@ -407,8 +407,7 @@ const App = () => {
               <div className="resume-container">
                 <a 
                   href="https://docs.google.com/document/d/e/2PACX-1vT-vq2fFGW8vaf_1I98ZmqiIyN5lLNLlLYYquB3_cMMJZ0tGrs1Rf-YJtLWlSH5nOUbCo-ZCdadzb8x/pub?output=pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  download="Bryan_Esslinger_Resume.pdf"
                   className="download-button"
                 >
                   Download PDF
