@@ -405,11 +405,16 @@ const App = () => {
             path="/resume"
             element={
               <div className="resume-container">
+                <a 
+                  href="https://docs.google.com/document/d/e/2PACX-1vT-vq2fFGW8vaf_1I98ZmqiIyN5lLNLlLYYquB3_cMMJZ0tGrs1Rf-YJtLWlSH5nOUbCo-ZCdadzb8x/pub?output=pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="download-button"
+                >
+                  Download PDF
+                </a>
                 <iframe
                   src="https://docs.google.com/document/d/e/2PACX-1vT-vq2fFGW8vaf_1I98ZmqiIyN5lLNLlLYYquB3_cMMJZ0tGrs1Rf-YJtLWlSH5nOUbCo-ZCdadzb8x/pub?embedded=true"
-                  width="75%"
-                  height="2050px"
-                  frameBorder="0"
                   title="Resume"
                 ></iframe>
               </div>
