@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
 import Experience from "./components/Experience";
+import Resume from "./components/Resume";
 import emailjs from '@emailjs/browser';
 import "./App.css";
 
@@ -405,17 +406,7 @@ const App = () => {
             path="/resume"
             element={
               <div className="resume-container">
-                <a 
-                  href="https://docs.google.com/document/d/e/2PACX-1vT-vq2fFGW8vaf_1I98ZmqiIyN5lLNLlLYYquB3_cMMJZ0tGrs1Rf-YJtLWlSH5nOUbCo-ZCdadzb8x/pub?output=pdf"
-                  download="Bryan_Esslinger_Resume.pdf"
-                  className="download-button"
-                >
-                  Download PDF
-                </a>
-                <iframe
-                  src="https://docs.google.com/document/d/e/2PACX-1vT-vq2fFGW8vaf_1I98ZmqiIyN5lLNLlLYYquB3_cMMJZ0tGrs1Rf-YJtLWlSH5nOUbCo-ZCdadzb8x/pub?embedded=true"
-                  title="Resume"
-                ></iframe>
+                <Resume />
               </div>
             }
           />
