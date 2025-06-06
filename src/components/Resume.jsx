@@ -328,7 +328,7 @@ const Resume = () => {
               />
               <h3>Dreamscape Marketing, LLC</h3>
             </div>
-            <span className="location">Newark, DE</span>
+            <span className="location">Philadelphia, PA</span>
           </div>
 
           <div className="role">
