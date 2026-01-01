@@ -4,17 +4,17 @@ const Resume = () => {
   const [expandedRoles, setExpandedRoles] = useState({});
 
   const toggleRole = (roleId) => {
-    setExpandedRoles(prev => ({
+    setExpandedRoles((prev) => ({
       ...prev,
-      [roleId]: !prev[roleId]
+      [roleId]: !prev[roleId],
     }));
   };
 
   return (
     <div className="resume-content">
       <a
-        href="/assets/Bryan_Esslinger_Resume.pdf"
-        download="Bryan_Esslinger_Resume.pdf"
+        href="/assets/Bryan_Esslinger-Resume-2026.pdf"
+        download="Bryan_Esslinger-Resume-2026.pdf"
         className="download-button"
       >
         Download PDF
@@ -23,16 +23,86 @@ const Resume = () => {
       <section className="resume-section">
         <h2>PROFESSIONAL SUMMARY</h2>
         <p>
-          Senior Product Manager with expertise in data-led, user-centric
-          solutions, delivering intuitive SaaS products that increase adoption
-          and revenue. Skilled in end-to-end product strategy, cross-functional
-          collaboration, and optimizing experiences for both businesses and
-          consumers.
+          Experienced product polymath with 13+ years building B2B/B2B2C SaaS
+          products from 0→1. Rare combination of technical fluency,
+          cross-functional leadership spanning sales/engineering/customer
+          success, and proven track record launching revenue-generating
+          products. Expert at establishing product organizations, aligning
+          roadmaps with business outcomes, and building for both technical and
+          non-technical users in high-growth startups.
         </p>
       </section>
 
       <section className="resume-section">
         <h2>WORK EXPERIENCE</h2>
+        <div className="experience-item">
+          <div className="company-header">
+            <div className="company-title">
+              <img
+                src="/assets/onramp-logo.jpg"
+                alt="OnRamp Logo"
+                className="company-logo"
+              />
+              <h3>OnRamp</h3>
+            </div>
+            <span className="location">Boston, MA (Remote)</span>
+          </div>
+
+          <div className="role">
+            <h4>Senior Product Manager</h4>
+            <span className="date">August 2025 – Present</span>
+            <button
+              className="toggle-button"
+              onClick={() => toggleRole("onramp-senior-pm")}
+              aria-expanded={expandedRoles["onramp-senior-pm"]}
+            >
+              {expandedRoles["onramp-senior-pm"] ? "−" : "+"}
+            </button>
+          </div>
+          <div
+            className={`achievements ${
+              expandedRoles["onramp-senior-pm"] ? "expanded" : "collapsed"
+            }`}
+          >
+            <p className="company-description">
+              AI-powered customer onboarding and engagement platform enabling CS
+              teams at leading B2B/B2B2C companies - from Fortune 15 enterprises
+              to high-growth startups - to accelerate time-to-value and scale
+              operations.
+            </p>
+            <p>
+              Established foundational product strategy framework, squad
+              structure, and modern agile practices from scratch as key founding
+              PM, implementing discovery-to-release cycles aligned with 2026
+              goal to double ARR.
+            </p>
+            <p>
+              Doubled Reporting product adoption to 45% of customers in 3 months
+              through comprehensive overhaul including AI-powered
+              insights—directly addressing the platform's #1 sales loss and
+              churn driver in 2025.
+            </p>
+            <p>
+              Built analytics infrastructure and AI agent analyzing call
+              transcripts to extract product insights, driving data-driven
+              roadmap prioritization and faster time-to-value for both internal
+              teams and customers.
+            </p>
+            <p>
+              Led 0→1 development and launch of OnRamp AI, establishing the
+              platform's intelligent co-pilot foundation that surfaces
+              predictive insights—building core capabilities for future workflow
+              automation and personalization.
+            </p>
+            <p>
+              Own B2B2C Customer Portal product strategy, delivering
+              personalized branded experiences that drive customer engagement
+              and accelerate adoption while enabling CS teams to scale
+              operations.
+            </p>
+          </div>
+        </div>
+
         <div className="experience-item">
           <div className="company-header">
             <div className="company-title">
@@ -48,35 +118,40 @@ const Resume = () => {
 
           <div className="role">
             <h4>Senior Product Manager</h4>
-            <span className="date">December 2021 – Present</span>
-            <button 
+            <span className="date">December 2021 – June 2025</span>
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('senior-pm')}
-              aria-expanded={expandedRoles['senior-pm']}
+              onClick={() => toggleRole("senior-pm")}
+              aria-expanded={expandedRoles["senior-pm"]}
             >
-              {expandedRoles['senior-pm'] ? '−' : '+'}
+              {expandedRoles["senior-pm"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['senior-pm'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["senior-pm"] ? "expanded" : "collapsed"
+            }`}
+          >
+            <p className="company-description">
+              LeagueApps is an all-in-one SaaS platform for youth and local
+              sports leaders. Since 2012, it has grown from an early-stage
+              startup to serving over 3K customers and 30M users in 2025.
+            </p>
             <p>
               Own end-to-end product strategy and roadmap for the scheduling
-              product, applying machine learning through integrated solutions to
-              automate data mapping and reduce friction, while shaping a broader
-              AI-driven strategy to resolve complex logistical conflicts.
+              product and related API surfaces, balancing new feature
+              development, platform investments, and technical debt to drive
+              adoption, retention, and growth.
             </p>
             <p>
               Increased adoption of the schedule product by 15%, increasing both
               customer retention and sales revenue.
             </p>
             <p>
-              Drove a 20% gain in developer efficiency by transitioning core
-              internal tools from a monolithic architecture to microservices,
-              aligning with Agile SDLC principles.
-            </p>
-            <p>
-              Partnered with engineering and product design teams to establish a
-              platform-wide design system, ensuring consistent UX and
-              accelerating development across multiple product lines.
+              Drove a 20% gain in developer efficiency and enabled modular,
+              extensible API capabilities that support long-term scalability by
+              transitioning core internal tools from a monolithic architecture
+              to microservices.
             </p>
             <p>
               Led 0→1 product development and GTM of{" "}
@@ -87,29 +162,45 @@ const Resume = () => {
               >
                 LeagueApps Facilities
               </a>
-              , integrating third-party booking tools to enable facility
-              inventory management—driving ~$500K in combined new enterprise
-              sales and retained ARR in year 1.
+              , integrating third-party booking tools to enable real-time
+              facility inventory management and customer data sync - driving
+              ~$500K in combined new enterprise sales and retained ARR in year
+              1.
+            </p>
+            <p>
+              Partnered with engineering and product design teams to establish a
+              platform-wide design system.
+            </p>
+            <p>
+              Regularly present roadmap updates and tradeoffs to senior
+              leadership, ensuring alignment across GTM.
+            </p>
+            <p>
+              Mentor PMs and cross-functional peers on product discovery,
+              prioritization, and stakeholder alignment.
             </p>
           </div>
 
           <div className="role">
             <h4>Product Manager</h4>
             <span className="date">March 2017 – November 2021</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('pm')}
-              aria-expanded={expandedRoles['pm']}
+              onClick={() => toggleRole("pm")}
+              aria-expanded={expandedRoles["pm"]}
             >
-              {expandedRoles['pm'] ? '−' : '+'}
+              {expandedRoles["pm"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['pm'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["pm"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
-              Oversaw discovery, design, implementation, and release of 50+
-              products and features across registration, payments,
-              communication, scheduling, reporting, CMS, API, and iOS/Android
-              app components.
+              Led discovery, design, development, and GTM of 50+ products and
+              features across registration, payments, e-commerce, communication,
+              scheduling, reporting, CMS, API, and iOS/Android app components.
             </p>
             <p>
               Collaborated cross-functionally to develop{" "}
@@ -120,11 +211,12 @@ const Resume = () => {
               >
                 LeagueApps Gateway
               </a>
-              , a Stripe Connect-powered internal platform supporting customer
-              payments and accounting workflows
+              , a Stripe Connect-powered internal platform supporting secure
+              customer payments and accounting workflow, now processing over $1B
+              transactions/year.
             </p>
             <p>
-              Led 0→1 development and launch of{" "}
+              Led 0→1 development and GTM of{" "}
               <a
                 href="https://leagueapps.com/leagueapps-play-mobile-app/"
                 target="_blank"
@@ -132,11 +224,11 @@ const Resume = () => {
               >
                 LeagueApps Play
               </a>
-              , a native iOS/Android app now used by millions of parents,
-              players, and coaches.
+              , a native iOS/Android app now used by 250K+ MAUs (parents,
+              players, and coaches).
             </p>
             <p>
-              Owned{" "}
+              Led 0→1 development and GTM of{" "}
               <a
                 href="https://join.leagueapps.com/designshop"
                 target="_blank"
@@ -144,9 +236,9 @@ const Resume = () => {
               >
                 Design Shop
               </a>
-              , a WordPress-based web design service, securing $900K in
-              first-year revenue and scaling to $1M+ ARR by building an in-house
-              agency.
+              , a WordPress-based web product development service for SMBs,
+              securing $750K in first-year revenue and scaling to $1M+ ARR by
+              building an in-house agency.
             </p>
             <p>
               Launched the{" "}
@@ -165,24 +257,29 @@ const Resume = () => {
               >
                 Zapier App Store listing
               </a>
-              , enabling no-code and API-based workflows that supported hundreds
-              of enterprise customers—contributing to ~$5M+ in influenced ARR
-              through sales enablement and churn prevention over time.
+              , enabling no-code and API-based workflows for developers,
+              partners, and power users that supported hundreds of enterprise
+              customers - contributing to ~$5M+ in influenced ARR through sales
+              enablement and churn prevention over time.
             </p>
           </div>
 
           <div className="role">
             <h4>Product Marketing Manager</h4>
             <span className="date">May 2016 – March 2017</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('pmm')}
-              aria-expanded={expandedRoles['pmm']}
+              onClick={() => toggleRole("pmm")}
+              aria-expanded={expandedRoles["pmm"]}
             >
-              {expandedRoles['pmm'] ? '−' : '+'}
+              {expandedRoles["pmm"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['pmm'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["pmm"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Established business objectives and success metrics for new
               features.
@@ -201,15 +298,19 @@ const Resume = () => {
           <div className="role">
             <h4>Manager, Customer Success & Onboarding</h4>
             <span className="date">July 2015 – April 2016</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('cs-manager')}
-              aria-expanded={expandedRoles['cs-manager']}
+              onClick={() => toggleRole("cs-manager")}
+              aria-expanded={expandedRoles["cs-manager"]}
             >
-              {expandedRoles['cs-manager'] ? '−' : '+'}
+              {expandedRoles["cs-manager"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['cs-manager'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["cs-manager"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Managed a team of four direct reports while activating 300+
               enterprise and strategic accounts, generating $5M+ in ARR,
@@ -232,15 +333,19 @@ const Resume = () => {
           <div className="role">
             <h4>Customer Success Lead</h4>
             <span className="date">March 2014 – June 2015</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('cs-lead')}
-              aria-expanded={expandedRoles['cs-lead']}
+              onClick={() => toggleRole("cs-lead")}
+              aria-expanded={expandedRoles["cs-lead"]}
             >
-              {expandedRoles['cs-lead'] ? '−' : '+'}
+              {expandedRoles["cs-lead"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['cs-lead'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["cs-lead"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Executed onboarding for 200+ accounts, ensuring smooth transitions
               from sales.
@@ -261,15 +366,19 @@ const Resume = () => {
           <div className="role">
             <h4>Customer Success Specialist</h4>
             <span className="date">January 2013 – February 2014</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('cs-specialist')}
-              aria-expanded={expandedRoles['cs-specialist']}
+              onClick={() => toggleRole("cs-specialist")}
+              aria-expanded={expandedRoles["cs-specialist"]}
             >
-              {expandedRoles['cs-specialist'] ? '−' : '+'}
+              {expandedRoles["cs-specialist"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['cs-specialist'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["cs-specialist"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Led the creation and optimization of the user onboarding (launch)
               process.
@@ -288,15 +397,19 @@ const Resume = () => {
           <div className="role">
             <h4>Inbound Marketing Intern</h4>
             <span className="date">June 2012 – December 2012</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('marketing-intern')}
-              aria-expanded={expandedRoles['marketing-intern']}
+              onClick={() => toggleRole("marketing-intern")}
+              aria-expanded={expandedRoles["marketing-intern"]}
             >
-              {expandedRoles['marketing-intern'] ? '−' : '+'}
+              {expandedRoles["marketing-intern"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['marketing-intern'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["marketing-intern"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Created and streamlined company's first sales qualification lead
               scoring system, and led prospecting through manual web search and
@@ -334,15 +447,19 @@ const Resume = () => {
           <div className="role">
             <h4>Account Manager</h4>
             <span className="date">June 2011 – June 2012</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('account-manager')}
-              aria-expanded={expandedRoles['account-manager']}
+              onClick={() => toggleRole("account-manager")}
+              aria-expanded={expandedRoles["account-manager"]}
             >
-              {expandedRoles['account-manager'] ? '−' : '+'}
+              {expandedRoles["account-manager"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['account-manager'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["account-manager"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Juggled account management responsibilities while completing
               undergraduate degree, gaining early hands-on experience in digital
@@ -380,15 +497,19 @@ const Resume = () => {
           <div className="role">
             <h4>Package Loader</h4>
             <span className="date">July 2009 – February 2012</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('package-loader')}
-              aria-expanded={expandedRoles['package-loader']}
+              onClick={() => toggleRole("package-loader")}
+              aria-expanded={expandedRoles["package-loader"]}
             >
-              {expandedRoles['package-loader'] ? '−' : '+'}
+              {expandedRoles["package-loader"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['package-loader'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["package-loader"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p className="company-description">
               Haulin' cube to pay for college!
             </p>
@@ -411,15 +532,19 @@ const Resume = () => {
           <div className="role">
             <h4>Video Coordinator, Football Program</h4>
             <span className="date">August 2009 – April 2011</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('video-coordinator')}
-              aria-expanded={expandedRoles['video-coordinator']}
+              onClick={() => toggleRole("video-coordinator")}
+              aria-expanded={expandedRoles["video-coordinator"]}
             >
-              {expandedRoles['video-coordinator'] ? '−' : '+'}
+              {expandedRoles["video-coordinator"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['video-coordinator'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["video-coordinator"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Supported the Division I football coaching staff by filming and
               editing daily practices and scrimmages, enabling detailed
@@ -439,15 +564,19 @@ const Resume = () => {
           <div className="role">
             <h4>Media Relations Intern</h4>
             <span className="date">September 2010 – December 2010</span>
-            <button 
+            <button
               className="toggle-button"
-              onClick={() => toggleRole('media-intern')}
-              aria-expanded={expandedRoles['media-intern']}
+              onClick={() => toggleRole("media-intern")}
+              aria-expanded={expandedRoles["media-intern"]}
             >
-              {expandedRoles['media-intern'] ? '−' : '+'}
+              {expandedRoles["media-intern"] ? "−" : "+"}
             </button>
           </div>
-          <div className={`achievements ${expandedRoles['media-intern'] ? 'expanded' : 'collapsed'}`}>
+          <div
+            className={`achievements ${
+              expandedRoles["media-intern"] ? "expanded" : "collapsed"
+            }`}
+          >
             <p>
               Contributed to the 2011 University of Delaware football media
               guide by supporting content creation and image editing.
@@ -465,42 +594,38 @@ const Resume = () => {
         <h2>SKILLS</h2>
         <div className="skills-grid">
           <div className="skill-category">
-            <h3>Product Leadership</h3>
+            <h3>Product & Strategy</h3>
             <p>
-              Strategy | Roadmapping | Requirements Analysis | Prioritization |
-              Technical Tradeoffs
+              Roadmapping | Prioritization Frameworks | 0→1 Development | GTM
+              Strategy | Stakeholder Alignment
             </p>
           </div>
           <div className="skill-category">
-            <h3>User-Centric</h3>
+            <h3>Technical Development</h3>
             <p>
-              Discovery | User Stories | Personas | Journey Maps | Customer
-              Feedback
+              REST APIs | SQL/NoSQL | JavaScript/TypeScript | React | Git | AWS
+              | Full Stack Capabilities
             </p>
           </div>
           <div className="skill-category">
-            <h3>AI & Automation</h3>
+            <h3>AI & Emerging Tech</h3>
             <p>
-              Generative AI | Prompt Engineering | Machine Learning | Data
-              Mapping Automation
+              Cursor | Claude (Artifacts, Projects, Skills) | Gemini |
+              Perplexity | Automation Design
             </p>
           </div>
           <div className="skill-category">
-            <h3>Search & Discovery</h3>
+            <h3>Customer & Analytics</h3>
             <p>
-              Global SaaS Search | Query Segmentation | Cross-Tenant
-              Elasticsearch | Search UI Patterns
+              Jobs-to-be-Done | UX Research | Data Analysis | Tableau | Sigma |
+              Heap | Google Analytics | BigQuery
             </p>
           </div>
           <div className="skill-category">
-            <h3>Technical Fluency</h3>
-            <p>APIs | SQL/NoSQL | HTML/CSS | JavaScript | Tech Specs</p>
-          </div>
-          <div className="skill-category">
-            <h3>Collaboration & Growth</h3>
+            <h3>Collaboration & Tools</h3>
             <p>
-              Technical Sales Strategy | Presentations | Stakeholder Buy-In |
-              Executive Influence
+              JIRA | Notion | Figma | Miro | Postman | Stripe | Zapier
+              Integrations
             </p>
           </div>
         </div>
