@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Project from "./components/Project";
 import Experience from "./components/Experience";
 import Resume from "./components/Resume";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import "./App.css";
 
 // Initialize EmailJS
@@ -28,7 +28,7 @@ const App = () => {
   const [emailStatus, setEmailStatus] = useState({
     loading: false,
     success: false,
-    error: false
+    error: false,
   });
 
   const handleChange = (e) => {
@@ -69,17 +69,17 @@ const App = () => {
     if (validateForm()) {
       try {
         await emailjs.sendForm(
-          'service_pyld18f',
-          'template_e3gp2gr',
+          "service_pyld18f",
+          "template_e3gp2gr",
           e.target,
-          '4e73ZFCZDBErolPjB'
+          "4e73ZFCZDBErolPjB"
         );
 
         setEmailStatus({ loading: false, success: true, error: false });
         setFormData({ name: "", email: "", message: "" }); // Reset form
         setErrors({}); // Reset errors
       } catch (error) {
-        console.error('Error sending email:', error);
+        console.error("Error sending email:", error);
         setEmailStatus({ loading: false, success: false, error: true });
       }
     } else {
@@ -126,15 +126,21 @@ const App = () => {
                 <p>
                   I'm an empathetic problem solver focused on delivering
                   impactful solutions. Over the course of my career, I've helped
-                  build and scale a software company that empowers organizations
-                  to transition online and grow. I've worked closely with
-                  hundreds of businesses—from small local organizations to
-                  global brands—helping them streamline operations, manage
+                  build and scale software companies that empower organizations
+                  to transition online and grow. As one of the first ten
+                  employees at LeagueApps, I played a key role in driving growth
+                  over 13 years, helping the company scale from startup to
+                  serving over 3,000 customers and 30M users. I worked closely
+                  with hundreds of businesses - from small local organizations
+                  to global brands - helping them streamline operations, manage
                   member databases, process payments, and integrate seamlessly
-                  with their tech stack. As one of the first ten employees at
-                  LeagueApps, I've played a key role in driving growth, helping
-                  the company scale from startup to serving over 3,000 customers
-                  and 30M users.
+                  with their tech stack. In 2025, I joined OnRamp, where I'm
+                  establishing foundational product management capabilities for
+                  a Series A customer onboarding platform. This role lets me
+                  leverage my unique experience building customer success
+                  organizations while now building products for CS teams -
+                  bringing together my passion for helping businesses activate
+                  and retain their customers.
                 </p>
                 <img
                   src="/assets/leagueapps-cartoon.png"
@@ -241,26 +247,33 @@ const App = () => {
                 </p>
                 <div className="projects-grid">
                   <Project
+                    title="OnRamp AI"
+                    description="Led 0→1 development and launch of OnRamp AI, establishing the platform's intelligent co-pilot foundation that surfaces predictive insights—building core capabilities for future workflow automation and personalization."
+                    imageUrl="/assets/onramp-ai.png"
+                    linkUrl="https://onramp.us/ai"
+                  />
+
+                  <Project
                     title="LeagueApps Gateway"
-                    description="Product Manager for the payments team responsible for developing an integrated in-product payment processor using Stripe Connect, streamlining payment collection and significantly improving company profit margins."
+                    description="Co-led build of payments platform leveraging Stripe Connect to improve unit economics and reduce customer payment friction across the entire LeagueApps ecosystem - now processing $1B+ in annual transactions."
                     imageUrl="/assets/leagueapps-gateway.png"
                     linkUrl="https://leagueapps.com/youth-sports-management-platform/payments/"
                   />
                   <Project
                     title="LeagueApps Play App"
-                    description="Product manager for the native mobile team, taking LeagueApps Play from 0->1, used by millions of players, parents, and coaches."
+                    description="Led 0→1 development of native iOS/Android app, now serving 250K+ monthly active users (players, parents, and coaches) to manage their sports experience and stay connected with their teams."
                     imageUrl="/assets/play.png"
                     linkUrl="https://leagueapps.com/leagueapps-play-mobile-app/"
                   />
                   <Project
                     title="LeagueApps Design Shop"
-                    description="Spearheaded Design Shop, a professional web design service powered on Wordpress, scaling it from contractor based to full in-house team generating revenue."
+                    description="Owned professional WordPress web development service, scaling from contractor model to in-house team generating $1M+ ARR while serving SMB customers with turnkey digital presence."
                     imageUrl="/assets/designshop.gif"
                     linkUrl="https://join.leagueapps.com/designshop"
                   />
-                    <Project
+                  <Project
                     title="LeagueApps Facilities"
-                    description="Led integration implementation and GTM for new product line, making significant impact on enterprise customer growth."
+                    description="Led 0→1 development of facility management product line, generating ~$500K combined new sales and retained ARR in year one while expanding enterprise customer footprint."
                     imageUrl="/assets/facilities.png"
                     linkUrl="https://leagueapps.com/youth-sports-management-platform/facilities/"
                   />
@@ -282,19 +295,7 @@ const App = () => {
                     imageUrl="/assets/jr-knicks.png"
                     linkUrl="https://www.nba.com/knicks/junior"
                   />
-                  <Project
-                    title="Photo Trace"
-                    description="PhotoTrace helps you uncover the hidden stories behind old photos by using AI to predict where and when they were taken."
-                    imageUrl="/assets/photo-trace2.png"
-                    linkUrl="https://photo-trace-client.onrender.com/"
-                  />
-                 <Project
-                    title="Word Guess"
-                    description="PhotoTrace helps you uncover the hidden stories behind old photos by using AI to predict where and when they were taken."
-                    imageUrl="/assets/word-guess.png"
-                    linkUrl="https://main.d1mdu2ha8sopcx.amplifyapp.com/"
-                  />
-                  <Project
+                                    <Project
                     title="Custom Drag & Drop Calendar"
                     description="Led requirements for data-rich, custom drag-and-drop scheduler with conflict logic for youth sports organizations, powered by React and microservices."
                     imageUrl="/assets/calendar-view.png"
@@ -305,6 +306,18 @@ const App = () => {
                     description="Led requirements for mobile-optimized list view with bulk action capabilities, built using React and microservices, and integrated with the AG Grid library."
                     imageUrl="/assets/list-view.png"
                     linkUrl="https://support.leagueapps.com/hc/en-us/articles/23315644300183-New-Club-Scheduling-Experience"
+                  />
+                  <Project
+                    title="Photo Trace"
+                    description="PhotoTrace helps you uncover the hidden stories behind old photos by using AI to predict where and when they were taken."
+                    imageUrl="/assets/photo-trace2.png"
+                    linkUrl="https://photo-trace-client.onrender.com/"
+                  />
+                  <Project
+                    title="Word Guess"
+                    description="PhotoTrace helps you uncover the hidden stories behind old photos by using AI to predict where and when they were taken."
+                    imageUrl="/assets/word-guess.png"
+                    linkUrl="https://main.d1mdu2ha8sopcx.amplifyapp.com/"
                   />
                   <Project
                     title="Weather Dashboard"
@@ -379,12 +392,12 @@ const App = () => {
                     )}
                   </div>
 
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     disabled={emailStatus.loading}
-                    className={emailStatus.loading ? 'loading' : ''}
+                    className={emailStatus.loading ? "loading" : ""}
                   >
-                    {emailStatus.loading ? 'Sending...' : 'Submit'}
+                    {emailStatus.loading ? "Sending..." : "Submit"}
                   </button>
 
                   {emailStatus.success && (
@@ -395,7 +408,8 @@ const App = () => {
 
                   {emailStatus.error && (
                     <p className="error-message">
-                      Sorry, there was an error sending your message. Please try again later.
+                      Sorry, there was an error sending your message. Please try
+                      again later.
                     </p>
                   )}
                 </form>
