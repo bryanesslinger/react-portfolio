@@ -63,7 +63,7 @@ const Footer = () => {
         <li><Link to="/contact" className="footer-link" onClick={() => {scrollToTop(); }}>Contact</Link></li>
       </ul>
     </nav>
-      <p>Built by Bryan | 2025</p>
+      <p>Built by Bryan | 2026</p>
     </footer>
   );
 };
