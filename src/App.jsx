@@ -159,6 +159,11 @@ const App = () => {
                   integration infrastructure that connects learning to the rest
                   of their tech stack.
                 </p>
+                <img
+                  src="/assets/work.png"
+                  alt="Bryan on laptop"
+                  className="about-image"
+                />
                 <p>
                   In 2024–25 I completed Columbia's Full Stack Coding Bootcamp
                   because I wanted to understand the craft my engineering
@@ -173,8 +178,8 @@ const App = () => {
                   building it into products during the week.
                 </p>
                 <img
-                  src="/assets/work.png"
-                  alt="Bryan on laptop"
+                  src="/assets/chef.png"
+                  alt="Bryan Cooking"
                   className="about-image"
                 />
                 <p>
@@ -187,8 +192,8 @@ const App = () => {
                   I'm working through an ever-growing list of NYC restaurants.
                 </p>
                 <img
-                  src="/assets/chef.png"
-                  alt="Bryan Cooking"
+                  src="/assets/concert.png"
+                  alt="Bryan at Brooklyn Made"
                   className="about-image"
                 />
                 <p>
@@ -209,8 +214,8 @@ const App = () => {
                   and check out my playlists.
                 </p>
                 <img
-                  src="/assets/concert.png"
-                  alt="Bryan at Brooklyn Made"
+                  src="/assets/nyc.png"
+                  alt="West Village"
                   className="about-image"
                 />
                 <p>
@@ -219,8 +224,8 @@ const App = () => {
                   new to explore. My Google Maps lists grow daily.
                 </p>
                 <img
-                  src="/assets/nyc.png"
-                  alt="West Village"
+                  src="/assets/ravens.png"
+                  alt="Farjer and Sons at Ravens"
                   className="about-image"
                 />
                 <p>
@@ -232,8 +237,8 @@ const App = () => {
                   title, though, is cool uncle to my two nieces.
                 </p>
                 <img
-                  src="/assets/ravens.png"
-                  alt="Farjer and Sons at Ravens"
+                  src="/assets/ess-nieces.png"
+                  alt="Bryan with his nieces"
                   className="about-image"
                 />
                 <p>
