@@ -126,8 +126,15 @@ const App = () => {
                 <p>
                   I'm a product leader who works where customers, data, and
                   technology meet. My path into product wasn't a straight line,
-                  and I think that's my edge. I spent 13 years at LeagueApps as
-                  one of the first ten employees. I started in sales, built the
+                  and I think that's my edge. I spent 13 years at{" "}
+                  <a
+                    href="https://leagueapps.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LeagueApps
+                  </a>{" "}
+                  as one of the first ten employees. I started in sales, built the
                   customer success organization from the ground up, and ran
                   implementations for hundreds of organizations, from local
                   leagues to global brands, before moving into product. Along
@@ -140,7 +147,15 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  In 2025 I joined OnRamp, a Series A customer onboarding
+                  In 2025 I joined{" "}
+                  <a
+                    href="https://onramp.us"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    OnRamp
+                  </a>
+                  , a Series A customer onboarding
                   platform, as a founding product manager, building the product
                   function from scratch. It was a full-circle moment. After
                   years of running onboardings out of spreadsheets and
@@ -150,7 +165,15 @@ const App = () => {
                   at the biggest gap in the sales pipeline.
                 </p>
                 <p>
-                  In 2026 I joined Intellum, an enterprise learning platform
+                  In 2026 I joined{" "}
+                  <a
+                    href="https://www.intellum.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Intellum
+                  </a>
+                  , an enterprise learning platform
                   used by companies like Google, Meta, and Amazon to educate
                   their employees, partners, and customers. As a Senior Product
                   Manager, I lead AI and platform strategy, building
