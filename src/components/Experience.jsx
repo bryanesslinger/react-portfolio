@@ -3,12 +3,15 @@ import React from 'react';
 const Experience = () => {
   const tools = [
     {
-      category: 'AI Tools',
+      category: 'AI & Agents',
       items: [
         { name: 'Cursor', icon: '/assets/cursor.png' },
         { name: 'Claude', icon: '/assets/claude.png' },
         { name: 'Gemini', icon: '/assets/gemini.png' },
-        { name: 'Perplexity', icon: '/assets/perplexity.png' },
+        { name: 'Claude Code', icon: '/assets/claude-code.png' },
+        { name: 'Model Context Protocol (MCP)', icon: '/assets/mcp.png' },
+        { name: 'LangChain', icon: '/assets/langchain.png' },
+        { name: 'Vertex AI', icon: '/assets/vertex.png' },
       ]
     },
     {
@@ -28,13 +31,15 @@ const Experience = () => {
         { name: 'Google Analytics', icon: '/assets/ga-icon.png' },
         { name: 'Pendo', icon: '/assets/pendo-icon.png' },
         { name: 'Launch Darkly', icon: '/assets/launch-darkly-icon.png' },
+        { name: 'BigQuery', icon: '/assets/big-query.png' },
+        { name: 'Looker', icon: '/assets/looker.png' },
+        { name: 'New Relic', icon: '/assets/newrelic.png' },
       ]
     },
     {
       category: 'Design & Prototyping',
       items: [
         { name: 'Figma', icon: '/assets/figma-icon.png' },
-        { name: 'Invision', icon: '/assets/invision-icon.png' },
         { name: 'Miro', icon: '/assets/miro-icon.png' },
       ]
     },
@@ -86,6 +91,7 @@ const Experience = () => {
         { name: 'WordPress', icon: '/assets/wordpress-icon.png' },
         { name: 'OpenAPI', icon: '/assets/openapi-icon.png' },
         { name: 'Google Cloud Platform', icon: '/assets/google-cloud-icon.png' },
+        { name: 'AWS', icon: '/assets/aws.png' },
       ]
     },
   ];
