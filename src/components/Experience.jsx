@@ -50,7 +50,6 @@ const Experience = () => {
         { name: 'Tableau', icon: '/assets/tableau-icon.png' },
         { name: 'Jellyfish', icon: '/assets/jellyfish-icon.png' },
         { name: 'Stripe', icon: '/assets/stripe-icon.png' },
-        { name: 'Stripe Connect', icon: '/assets/stripe-connect-icon.png' },
         { name: 'Sendgrid', icon: '/assets/sendgrid-icon.png' },
         { name: 'Twilio', icon: '/assets/twilio-icon.png' },
         { name: 'Zapier', icon: '/assets/zapier-icon.png' },
