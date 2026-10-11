@@ -27,14 +27,71 @@ const Resume = () => {
           products from 0→1. Rare combination of technical fluency,
           cross-functional leadership spanning sales/engineering/customer
           success, and proven track record launching revenue-generating
-          products. Expert at establishing product organizations, aligning
-          roadmaps with business outcomes, and building for both technical and
-          non-technical users in high-growth startups.
+          products. Currently leading AI infrastructure and platform
+          extensibility strategy — including conversational agents, MCP
+          tooling, and AI usage monetization — for an enterprise learning
+          platform serving Fortune 100 customers. Expert at aligning roadmaps
+          with business outcomes and building for both technical and
+          non-technical users, from high-growth startups to global
+          enterprises.
         </p>
       </section>
 
       <section className="resume-section">
         <h2>WORK EXPERIENCE</h2>
+        <div className="experience-item">
+          <div className="company-header">
+            <div className="company-title">
+              <img
+                src="/assets/intellum.png"
+                alt="Intellum Logo"
+                className="company-logo"
+              />
+              <h3>Intellum</h3>
+            </div>
+            <span className="location">New York, NY (Remote)</span>
+          </div>
+
+          <div className="role">
+            <h4>Senior Product Manager</h4>
+            <span className="date">August 2026 – Present</span>
+            <button
+              className="toggle-button"
+              onClick={() => toggleRole("intellum-senior-pm")}
+              aria-expanded={expandedRoles["intellum-senior-pm"]}
+            >
+              {expandedRoles["intellum-senior-pm"] ? "−" : "+"}
+            </button>
+          </div>
+          <div
+            className={`achievements ${
+              expandedRoles["intellum-senior-pm"] ? "expanded" : "collapsed"
+            }`}
+          >
+            <p className="company-description">
+              Enterprise customer education and learning management platform
+              enabling global enterprises — including Google, Meta, Amazon,
+              TikTok, and Walmart — to educate employees, partners, and
+              customers at scale.
+            </p>
+            <p>
+              Own product strategy for AI infrastructure and platform
+              extensibility — spanning in-app conversational agents for B2B and
+              B2B2C enterprise experiences, Model Context Protocol (MCP) tooling
+              enabling customers to embed Intellum into their own AI agents and
+              corporate LLMs, and the monetization infrastructure to price and
+              bill for AI-powered usage at scale.
+            </p>
+            <p>
+              Lead integration and data platform strategy — including
+              third-party ecosystem connectors, enterprise data pipeline
+              architecture, and BigQuery-based analytics infrastructure enabling
+              customers to operationalize learning data across their broader
+              tech stack.
+            </p>
+          </div>
+        </div>
+
         <div className="experience-item">
           <div className="company-header">
             <div className="company-title">
@@ -50,7 +107,7 @@ const Resume = () => {
 
           <div className="role">
             <h4>Senior Product Manager</h4>
-            <span className="date">August 2025 – Present</span>
+            <span className="date">August 2025 – July 2026</span>
             <button
               className="toggle-button"
               onClick={() => toggleRole("onramp-senior-pm")}
@@ -95,7 +152,7 @@ const Resume = () => {
               automation and personalization.
             </p>
             <p>
-              Own B2B2C Customer Portal product strategy, delivering
+              Owned B2B2C Customer Portal product strategy, delivering
               personalized branded experiences that drive customer engagement
               and accelerate adoption while enabling CS teams to scale
               operations.
@@ -604,14 +661,17 @@ const Resume = () => {
             <h3>Technical Development</h3>
             <p>
               REST APIs | SQL/NoSQL | JavaScript/TypeScript | React | Git | AWS
-              | Full Stack Capabilities
+              | Data Pipelines | Third-Party Integrations | Full Stack
+              Capabilities
             </p>
           </div>
           <div className="skill-category">
             <h3>AI & Emerging Tech</h3>
             <p>
-              Cursor | Claude (Artifacts, Projects, Skills) | Gemini |
-              Perplexity | Automation Design
+              Model Context Protocol (MCP) | Conversational AI Agents | LLM
+              Integrations | AI Usage-Based Pricing | Cursor | Claude
+              (Artifacts, Projects, Skills) | Gemini | Automation
+              Design
             </p>
           </div>
           <div className="skill-category">

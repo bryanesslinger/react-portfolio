@@ -114,33 +114,25 @@ const App = () => {
             element={
               <div>
                 <p>
-                  I love stories. Every day and every situation has its own -
-                  they constantly stir my curiosity. Here's a look at mine so
-                  far.
+                  I love stories. Every day and every situation has its own,
+                  and they constantly stir my curiosity. Here's a look at mine
+                  so far.
                 </p>
                 <img
-                  src="/assets/home.png"
+                  src="/assets/bryan-new.png"
                   alt="Bryan"
                   className="about-image"
                 />
                 <p>
-                  I'm an empathetic problem solver focused on delivering
-                  impactful solutions. Over the course of my career, I've helped
-                  build and scale software companies that empower organizations
-                  to transition online and grow. As one of the first ten
-                  employees at LeagueApps, I played a key role in driving growth
-                  over 13 years, helping the company scale from startup to
-                  serving over 3,000 customers and 30M users. I worked closely
-                  with hundreds of businesses - from small local organizations
-                  to global brands - helping them streamline operations, manage
-                  member databases, process payments, and integrate seamlessly
-                  with their tech stack. In 2025, I joined OnRamp, where I'm
-                  establishing foundational product management capabilities for
-                  a Series A customer onboarding platform. This role lets me
-                  leverage my unique experience building customer success
-                  organizations while now building products for CS teams -
-                  bringing together my passion for helping businesses activate
-                  and retain their customers.
+                  I'm a product leader who works where customers, data, and
+                  technology meet. My path into product wasn't a straight line,
+                  and I think that's my edge. I spent 13 years at LeagueApps as
+                  one of the first ten employees. I started in sales, built the
+                  customer success organization from the ground up, and ran
+                  implementations for hundreds of organizations, from local
+                  leagues to global brands, before moving into product. Along
+                  the way the company grew from a startup to serving 3,000+
+                  customers and 30M users.
                 </p>
                 <img
                   src="/assets/leagueapps-cartoon.png"
@@ -148,16 +140,37 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  To grow as a well-rounded leader in the software industry, I
-                  pursued a Full Stack Coding Bootcamp through Columbia
-                  University in 2024-25. This experience deepened my
-                  understanding of product development, improving my ability to
-                  communicate with cross-functional teams and drive innovation.
-                  It expanded my technical skills and reinforced my commitment
-                  to staying ahead of industry trends while fostering a more
-                  holistic approach to leadership. I've learned to love coding
-                  and creating my own projects - I built this very site from
-                  scratch using React!
+                  In 2025 I joined OnRamp, a Series A customer onboarding
+                  platform, as a founding product manager, building the product
+                  function from scratch. It was a full-circle moment. After
+                  years of running onboardings out of spreadsheets and
+                  whiteboards, I got to build the tool I wished I'd had. I set
+                  up the roadmap, planning, and release processes, shipped the
+                  company's first AI feature, and led a reporting overhaul aimed
+                  at the biggest gap in the sales pipeline.
+                </p>
+                <p>
+                  In 2026 I joined Intellum, an enterprise learning platform
+                  used by companies like Google, Meta, and Amazon to educate
+                  their employees, partners, and customers. As a Senior Product
+                  Manager, I lead AI and platform strategy, building
+                  conversational agents, MCP tooling that lets customers bring
+                  Intellum into their own AI agents, and the data and
+                  integration infrastructure that connects learning to the rest
+                  of their tech stack.
+                </p>
+                <p>
+                  In 2024–25 I completed Columbia's Full Stack Coding Bootcamp
+                  because I wanted to understand the craft my engineering
+                  partners work in every day. It changed how I operate: I write
+                  SQL, dig into APIs, prototype my own ideas, and I built this
+                  site from scratch in React. These days most of my weekend
+                  projects are built alongside AI, including a World Cup bracket
+                  simulator, an agent that answers questions about live NFL
+                  data, and a photo recognition app to help my grandma place the
+                  date and locations of old photos where it wasn't written on
+                  the back. Building with AI on the weekends makes me sharper at
+                  building it into products during the week.
                 </p>
                 <img
                   src="/assets/work.png"
@@ -165,13 +178,13 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Outside of work, I'm a proud Delaware native and University of
-                  Delaware alum. Whether it's the Delaware shores or the lively
-                  boardwalk of OCMD, you'll often find me prioritizing beach
-                  trips. When I'm not soaking up the sun, I'm a self-proclaimed
-                  foodie who loves cooking and experimenting with new
-                  recipes—the kitchen is where I unleash my creativity when I'm
-                  not focused on product roadmaps.
+                  Outside of work, I'm a proud Delaware native, a University of
+                  Delaware alum, and a beach bum at heart. Whether it's the
+                  Delaware shores or the OCMD boardwalk, beach trips always make
+                  the calendar. The kitchen is my creative outlet. I cook
+                  seriously and experiment constantly. Guy Fieri's life on
+                  Diners Drive-Ins and Dives is my dream. When I'm not cooking,
+                  I'm working through an ever-growing list of NYC restaurants.
                 </p>
                 <img
                   src="/assets/chef.png"
@@ -179,14 +192,13 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Music is also a big part of my life. I'm always discovering
-                  new sounds, putting together playlists, and going to live
-                  shows. I've always been drawn to how a song can instantly take
-                  you back to a moment, with all the memories that come with it.
-                  Growing up in the eclectic 90s definitely shaped my taste. I
-                  love classic rock from the 60's and 70's, 80's avante-garde,
-                  90's hip hop, 2000's alternative, and the growing indie scene
-                  since.
+                  Music is a big part of my life too. I'm always discovering new
+                  sounds, building playlists, and going to live shows. I love
+                  how a song can instantly take you back to a moment and
+                  everything that came with it. Growing up in the eclectic '90s
+                  shaped my taste: '60s and '70s classic rock, '80s
+                  avant-garde, '90s hip hop, 2000s alternative, and the indie
+                  scene that's grown since.
                   <a
                     href="https://open.spotify.com/user/bmorebry?si=95e50a9eef8f4157"
                     target="_blank"
@@ -202,11 +214,9 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Since 2012 I've called New York City home. I love the city's
-                  energy, the walking lifestyle, and the endless opportunities
-                  to explore. NYC continues to fuel my curiosity and creativity,
-                  and every day here is an exciting adventure. My Google map
-                  favorites lists grow daily!
+                  New York City has been home since 2012. I love the energy, the
+                  walking lifestyle, and the fact that there's always something
+                  new to explore. My Google Maps lists grow daily.
                 </p>
                 <img
                   src="/assets/nyc.png"
@@ -214,15 +224,12 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  Baltimore is like a second home to me, it's where my family
-                  roots are and it's where you'll find me for several holidays
-                  and events throughout the year. We're avid Orioles and Ravens
-                  fans. Sports have always had a big influence in my life, and I
-                  believe, as Nelson Mandela said, they have the power to change
-                  the world. That's why working in the sports tech industry is
-                  so meaningful to me—helping provide kids with more
-                  opportunities to play and learn life lessons that shape them
-                  into better people.
+                  Baltimore is my second home. It's where my family roots are
+                  and where you'll find me for holidays throughout the year.
+                  We're Orioles and Ravens fans through and through, and sports
+                  have always been a big part of my life, from Camden Yards to
+                  more fantasy leagues than I'd like to admit. My favorite
+                  title, though, is cool uncle to my two nieces.
                 </p>
                 <img
                   src="/assets/ravens.png"
@@ -230,9 +237,9 @@ const App = () => {
                   className="about-image"
                 />
                 <p>
-                  In everything I do, whether it's work or personal life, I'm
-                  driven by curiosity, creativity, and a passion for making
-                  meaningful connections with people and the world around me.
+                  In everything I do, I'm driven by curiosity, creativity, and a
+                  passion for making meaningful connections with people and the
+                  world around me.
                 </p>
               </div>
             }
