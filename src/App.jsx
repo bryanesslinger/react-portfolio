@@ -289,8 +289,8 @@ const App = () => {
                   />
                   <Project
                     title="OnRamp AI"
-                    description="Led 0→1 development and launch of OnRamp AI, establishing the platform's intelligent co-pilot foundation that surfaces predictive insights—building core capabilities for future workflow automation and personalization."
-                    imageUrl="/assets/onramp-ai.png"
+                    description="Led 0→1 launch of Aero for Customers, OnRamp’s B2B2C onboarding agent. It watches customer progress in the portal, steps in when they stall, and hands off to the team when a human is needed."
+                    imageUrl="/assets/onramp-aero.png"
                     linkUrl="https://onramp.us/ai"
                   />
 
