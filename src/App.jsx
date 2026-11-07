@@ -283,7 +283,7 @@ const App = () => {
                 <div className="projects-grid">
                   <Project
                     title="Intellum MCP Connectors"
-                    description="Shipped MCP connectors that let learners, creators, admins, and Evolve authors work in Intellum from Claude, Gemini, or Copilot. Every request runs under the person's role-based permissions, changes wait for approval before they happen, and each action is logged to an audit trail."
+                    description="Shipped MCP connectors that put Intellum inside any AI tool, from Claude, Gemini, and Copilot to a company’s own custom LLM. Every request runs under the person’s role-based permissions, changes wait for approval, and every action is logged to an audit trail."
                     imageUrl="/assets/intellum-mcp-connectors.gif"
                     linkUrl="https://www.intellum.com/solutions/mcp-connectors"
                   />
