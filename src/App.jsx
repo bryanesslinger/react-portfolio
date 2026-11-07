@@ -284,7 +284,7 @@ const App = () => {
                   <Project
                     title="Intellum MCP Connectors"
                     description="Shipped MCP connectors that let learners, creators, admins, and Evolve authors work in Intellum from Claude, Gemini, or Copilot. Every request runs under the person's role-based permissions, changes wait for approval before they happen, and each action is logged to an audit trail."
-                    imageUrl="/assets/intellum-learner-mcp.gif"
+                    imageUrl="/assets/intellum-mcp-connectors.gif"
                     linkUrl="https://www.intellum.com/solutions/mcp-connectors"
                   />
                   <Project
