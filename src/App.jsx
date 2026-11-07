@@ -282,6 +282,12 @@ const App = () => {
                 </p>
                 <div className="projects-grid">
                   <Project
+                    title="Intellum MCP Connectors"
+                    description="Shipped MCP connectors that let learners, creators, admins, and Evolve authors work in Intellum from Claude, Gemini, or Copilot. Every request runs under the person's role-based permissions, changes wait for approval before they happen, and each action is logged to an audit trail."
+                    imageUrl="/assets/intellum-learner-mcp.gif"
+                    linkUrl="https://www.intellum.com/solutions/mcp-connectors"
+                  />
+                  <Project
                     title="OnRamp AI"
                     description="Led 0→1 development and launch of OnRamp AI, establishing the platform's intelligent co-pilot foundation that surfaces predictive insights—building core capabilities for future workflow automation and personalization."
                     imageUrl="/assets/onramp-ai.png"
